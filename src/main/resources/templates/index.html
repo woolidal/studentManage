@@ -32,17 +32,21 @@
 
         <!-- Sidebar - Brand -->
         <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index">
+            <!-- 아이콘 15도 회전 -->
             <div class="sidebar-brand-icon rotate-n-15">
                 <i class="fas fa-laugh-wink"></i>
             </div>
+            <!-- 사이드바 제목 -->
             <div class="sidebar-brand-text mx-3">학생관리시스템</div>
         </a>
 
         <!-- Divider -->
         <hr class="sidebar-divider my-0">
 
+        <!-- 프로필 사진 -->
         <img class="rounded-circle" src="img/undraw_profile_1.svg">
         <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index">
+            <!-- 선생님 이름은 DB에서 받아오는 걸로 -->
             <div class="sidebar-brand-text mx-3">000선생님</div>
         </a>
 
@@ -51,6 +55,7 @@
         <!-- Nav Item - Dashboard -->
         <li class="nav-item active">
             <a class="nav-link" href="index">
+                <!-- 아이콘 -->
                 <i class="fas fa-fw fa-tachometer-alt"></i>
                 <span>메인페이지</span></a>
         </li>
@@ -470,38 +475,8 @@
 
                 <div class="row">
 
-                    <!-- Area Chart -->
-                    <div class="col-xl-8 col-lg-7">
-                        <div class="card shadow mb-4">
-                            <!-- Card Header - Dropdown -->
-                            <div
-                                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                <h6 class="m-0 font-weight-bold text-primary">학급 시간표</h6>
-                                <div class="dropdown no-arrow">
-                                    <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
-                                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-                                    </a>
-                                    <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
-                                         aria-labelledby="dropdownMenuLink">
-                                        <div class="dropdown-header">Dropdown Header:</div>
-                                        <a class="dropdown-item" href="#">Action</a>
-                                        <a class="dropdown-item" href="#">Another action</a>
-                                        <div class="dropdown-divider"></div>
-                                        <a class="dropdown-item" href="#">Something else here</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Card Body -->
-                            <div class="card-body">
-                                <div class="chart-area">
-                                    <canvas id="myAreaChart"></canvas>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
 
-                    <!-- Pie Chart -->
+                    <!-- 달력 /hus.kyeom -->
                     <div class="col-xl-4 col-lg-5">
                         <div class="card shadow mb-4">
                             <!-- Card Header - Dropdown -->
@@ -542,6 +517,39 @@
                             </div>
                         </div>
                     </div>
+
+                    <!-- 선생님 시간표 /hus.kyeom -->
+                    <div class="col-xl-8 col-lg-7">
+                        <div class="card shadow mb-4">
+                            <!-- Card Header - Dropdown -->
+                            <div
+                                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                <h6 class="m-0 font-weight-bold text-primary">선생님 시간표</h6>
+                                <div class="dropdown no-arrow">
+                                    <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
+                                         aria-labelledby="dropdownMenuLink">
+                                        <div class="dropdown-header">Dropdown Header:</div>
+                                        <a class="dropdown-item" href="#">Action</a>
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="#">Something else here</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Card Body -->
+                            <div class="card-body">
+                                <div class="chart-area">
+                                    <canvas id="myAreaChart"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
                 </div>
 
                 <!-- Content Row -->
@@ -550,10 +558,10 @@
                     <!-- Content Column -->
                     <div class="col-lg-6 mb-4">
 
-                        <!-- Project Card Example -->
+                        <!-- 공지사항 -->
                         <div class="card shadow mb-4">
                             <div class="card-header py-3">
-                                <h6 class="m-0 font-weight-bold text-primary">공지사함 게시판</h6>
+                                <h6 class="m-0 font-weight-bold text-primary">공지사항 게시판</h6>
                             </div>
                             <div class="card-body">
                                 <div class="table-responsive">
@@ -566,14 +574,15 @@
                                             <th>조회</th>
                                         </tr>
                                         </thead>
-                                        <tfoot>
-                                        <tr>
-                                            <th>제목</th>
-                                            <th>작성자</th>
-                                            <th>날짜</th>
-                                            <th>조회</th>
-                                        </tr>
-                                        </tfoot>
+                                        <!-- 공지사항 최하단에 있는 부분 일단 주석처리 /hus.kyeom -->
+<!--                                        <tfoot>-->
+<!--                                        <tr>-->
+<!--                                            <th>제목</th>-->
+<!--                                            <th>작성자</th>-->
+<!--                                            <th>날짜</th>-->
+<!--                                            <th>조회</th>-->
+<!--                                        </tr>-->
+<!--                                        </tfoot>-->
                                         <tbody>
                                             <tr>
                                                 <td>공지입니다.</td>
@@ -596,7 +605,7 @@
                                             <tr>
                                                 <td>아메리카노.</td>
                                                 <td>관리자</td>
-                                                <td>2022/12/07</td>
+                                                <td>2022/12/03</td>
                                                 <td>12</td>
                                             </tr>
                                         </tbody>
