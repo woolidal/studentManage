@@ -375,8 +375,6 @@
                 <!-- Page Heading -->
                 <div class="d-sm-flex align-items-center justify-content-between mb-4">
                     <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
-                    <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                            class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
                 </div>
 
                 <!--                    &lt;!&ndash; Content Row &ndash;&gt;-->
@@ -470,37 +468,6 @@
 
                 <div class="row">
 
-                    <!-- Area Chart -->
-                    <div class="col-xl-8 col-lg-7">
-                        <div class="card shadow mb-4">
-                            <!-- Card Header - Dropdown -->
-                            <div
-                                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                <h6 class="m-0 font-weight-bold text-primary">학급 시간표</h6>
-                                <div class="dropdown no-arrow">
-                                    <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
-                                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-                                    </a>
-                                    <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
-                                         aria-labelledby="dropdownMenuLink">
-                                        <div class="dropdown-header">Dropdown Header:</div>
-                                        <a class="dropdown-item" href="#">Action</a>
-                                        <a class="dropdown-item" href="#">Another action</a>
-                                        <div class="dropdown-divider"></div>
-                                        <a class="dropdown-item" href="#">Something else here</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Card Body -->
-                            <div class="card-body">
-                                <div class="chart-area">
-                                    <canvas id="myAreaChart"></canvas>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
                     <!-- Pie Chart -->
                     <div class="col-xl-4 col-lg-5">
                         <div class="card shadow mb-4">
@@ -542,6 +509,38 @@
                             </div>
                         </div>
                     </div>
+
+                    <!-- Area Chart -->
+                    <div class="col-xl-8 col-lg-7">
+                        <div class="card shadow mb-4">
+                            <!-- Card Header - Dropdown -->
+                            <div
+                                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                <h6 class="m-0 font-weight-bold text-primary">학급 시간표</h6>
+                                <div class="dropdown no-arrow">
+                                    <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
+                                         aria-labelledby="dropdownMenuLink">
+                                        <div class="dropdown-header">Dropdown Header:</div>
+                                        <a class="dropdown-item" href="#">Action</a>
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="#">Something else here</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Card Body -->
+                            <div class="card-body">
+                                <div class="chart-area">
+                                    <canvas id="myAreaChart"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
 
                 <!-- Content Row -->
@@ -566,15 +565,55 @@
                                             <th>조회</th>
                                         </tr>
                                         </thead>
-                                        <tfoot>
-                                        <tr>
-                                            <th>제목</th>
-                                            <th>작성자</th>
-                                            <th>날짜</th>
-                                            <th>조회</th>
-                                        </tr>
-                                        </tfoot>
                                         <tbody>
+                                            <tr>
+                                                <td>공지입니다.</td>
+                                                <td>관리자</td>
+                                                <td>2022/12/08</td>
+                                                <td>12</td>
+                                            </tr>
+                                            <tr>
+                                                <td>배고픕니다.</td>
+                                                <td>관리자</td>
+                                                <td>2022/12/07</td>
+                                                <td>22</td>
+                                            </tr>
+                                            <tr>
+                                                <td>운동회 공지</td>
+                                                <td>관리자</td>
+                                                <td>2022/12/05</td>
+                                                <td>15</td>
+                                            </tr>
+                                            <tr>
+                                                <td>아메리카노.</td>
+                                                <td>관리자</td>
+                                                <td>2022/12/07</td>
+                                                <td>12</td>
+                                            </tr>
+                                            <tr>
+                                                <td>공지입니다.</td>
+                                                <td>관리자</td>
+                                                <td>2022/12/08</td>
+                                                <td>12</td>
+                                            </tr>
+                                            <tr>
+                                                <td>배고픕니다.</td>
+                                                <td>관리자</td>
+                                                <td>2022/12/07</td>
+                                                <td>22</td>
+                                            </tr>
+                                            <tr>
+                                                <td>운동회 공지</td>
+                                                <td>관리자</td>
+                                                <td>2022/12/05</td>
+                                                <td>15</td>
+                                            </tr>
+                                            <tr>
+                                                <td>아메리카노.</td>
+                                                <td>관리자</td>
+                                                <td>2022/12/07</td>
+                                                <td>12</td>
+                                            </tr>
                                             <tr>
                                                 <td>공지입니다.</td>
                                                 <td>관리자</td>
@@ -720,7 +759,7 @@
         <footer class="sticky-footer bg-white">
             <div class="container my-auto">
                 <div class="copyright text-center my-auto">
-                    <span>Copyright &copy; Your Website 2021</span>
+                    <span>Copyright &copy; FOR T</span>
                 </div>
             </div>
         </footer>
@@ -773,6 +812,10 @@
 <!— Page level custom scripts —>
 <script src="js/demo/chart-area-demo.js"></script>
 <script src="js/demo/chart-pie-demo.js"></script>
+
+<script src="vendor/datatables/jquery.dataTables.min.js"></script>
+<script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
+<script src="js/demo/datatables-demo.js"></script>
 
 </body>
 
