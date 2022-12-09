@@ -10,6 +10,10 @@
  * Copyright 2011-2021 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+
+
+
+
 :root {
   --blue: #4e73df;
   --indigo: #6610f2;
@@ -1483,7 +1487,8 @@ pre code {
 }
 
 .table {
-  width: 100%;
+  width: 200%;
+  height: 200%;
   margin-bottom: 1rem;
   color: #858796;
 }
@@ -1766,7 +1771,7 @@ pre code {
   background-color: rgba(255, 255, 255, 0.075);
 }
 
-@media (max-width: 575.98px) {
+@media (max-width: 700.98px) {
   .table-responsive-sm {
     display: block;
     width: 100%;
@@ -6626,6 +6631,8 @@ button.bg-dark:focus {
 
 .d-none {
   display: none !important;
+  width: 100px;
+  height: 200px;
 }
 
 .d-inline {
@@ -6669,6 +6676,8 @@ button.bg-dark:focus {
   }
   .d-sm-inline-block {
     display: inline-block !important;
+    width: 50px;
+    height: 50px;
   }
   .d-sm-block {
     display: block !important;
@@ -6688,6 +6697,7 @@ button.bg-dark:focus {
   .d-sm-inline-flex {
     display: inline-flex !important;
   }
+
 }
 
 @media (min-width: 768px) {
@@ -10746,7 +10756,7 @@ a:focus {
 .btn-circle.btn-sm, .btn-group-sm > .btn-circle.btn {
   height: 1.8rem;
   width: 1.8rem;
-  font-size: 0.75rem;
+  font-size: 15rem;
 }
 
 .btn-circle.btn-lg, .btn-group-lg > .btn-circle.btn {
@@ -10775,7 +10785,7 @@ a:focus {
 }
 
 .btn-icon-split.btn-sm .icon, .btn-group-sm > .btn-icon-split.btn .icon {
-  padding: 0.25rem 0.5rem;
+  padding: 3.25rem 3.5rem;
 }
 
 .btn-icon-split.btn-sm .text, .btn-group-sm > .btn-icon-split.btn .text {
@@ -11279,3 +11289,4 @@ footer.sticky-footer .copyright {
 body.sidebar-toggled footer.sticky-footer {
   width: 100%;
 }
+

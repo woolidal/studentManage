@@ -17,4 +17,9 @@ public class WebController {
 
         return "index";
     }
+    @RequestMapping("/check")
+    public String check(){
+
+        return "check";
+    }
 }

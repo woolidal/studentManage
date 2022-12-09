@@ -16,4 +16,9 @@ public class APIhtml {
         return "index";
     }
 
+    @RequestMapping(value = "/check", method = RequestMethod.GET)
+    public String check(){
+        return "check";
+    }
+
 }
