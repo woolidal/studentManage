@@ -17,4 +17,10 @@ public class WebController {
 
         return "index";
     }
+
+    @RequestMapping("/subject_stuManage")
+    public String subject_stuManage(){
+
+        return "subject_stuManage";
+    }
 }

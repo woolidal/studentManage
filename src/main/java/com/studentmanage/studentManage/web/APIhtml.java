@@ -16,4 +16,8 @@ public class APIhtml {
         return "index";
     }
 
+    @RequestMapping(value = "/subject_stuManage", method = RequestMethod.GET)
+    public String subject_stuManage(){
+        return "subject_stuManage";
+    }
 }
