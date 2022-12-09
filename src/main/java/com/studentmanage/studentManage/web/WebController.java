@@ -27,4 +27,7 @@ public class WebController {
     public String clsseatedit(){
         return "class_seat_edit";
     }
+
+    @RequestMapping("/subject_seat")
+    public String sbjseat() { return "subject_seat"; }
 }

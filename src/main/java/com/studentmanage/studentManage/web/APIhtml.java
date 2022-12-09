@@ -22,4 +22,7 @@ public class APIhtml {
     @RequestMapping(value = "class_seat_edit", method = RequestMethod.GET)
     public String clsseatedit() { return "class_seat_edit"; }
 
+    @RequestMapping(value = "subject_seat", method = RequestMethod.GET)
+    public String sbjseat() { return "subject_seat"; }
+
 }
