@@ -20,4 +20,13 @@ public class APIhtml {
     public String subject_stuManage(){
         return "subject_stuManage";
     }
+    @RequestMapping(value = "class_seat", method = RequestMethod.GET)
+    public String clsseat() { return "class_seat"; }
+
+    @RequestMapping(value = "class_seat_edit", method = RequestMethod.GET)
+    public String clsseatedit() { return "class_seat_edit"; }
+
+    @RequestMapping(value = "subject_seat", method = RequestMethod.GET)
+    public String sbjseat() { return "subject_seat"; }
+
 }

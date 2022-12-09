@@ -23,4 +23,17 @@ public class WebController {
 
         return "subject_stuManage";
     }
+
+    @RequestMapping("/class_seat")
+    public String clsseat(){
+        return "class_seat";
+    }
+
+    @RequestMapping("/class_seat_edit")
+    public String clsseatedit(){
+        return "class_seat_edit";
+    }
+
+    @RequestMapping("/subject_seat")
+    public String sbjseat() { return "subject_seat"; }
 }
