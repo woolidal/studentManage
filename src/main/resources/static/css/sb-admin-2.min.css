@@ -136,3 +136,18 @@
     height:20px;
     vertical-align: middle;
 }
+.check_label
+{
+    display: inline-block;
+    width: 100px;
+    line-height: 50px ;
+    margin : -10px;
+    text-align: center;
+}
+.check_input
+{
+    width: 25px;
+    height: 25px ;
+    vertical-align:-7px;
+}
+/* 출석 체크 버튼 라벨 관리  -> 형석  */

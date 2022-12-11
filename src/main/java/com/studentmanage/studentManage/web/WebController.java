@@ -22,6 +22,16 @@ public class WebController {
 
         return "check";
     }
+    @RequestMapping("/check_book")
+    public String check_book(){
+
+        return "check_book";
+    }
+    @RequestMapping("/check_book_change")
+    public String check_book_change(){
+
+        return "check_book_change";
+    }
 
     @RequestMapping("/subject_stuManage")
     public String subject_stuManage(){

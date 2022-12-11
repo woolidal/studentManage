@@ -11289,4 +11289,19 @@ footer.sticky-footer .copyright {
 body.sidebar-toggled footer.sticky-footer {
   width: 100%;
 }
-
+/* 출석 체크 버튼 라벨 관리 -> 형석 */
+.check_label
+{
+  display: inline-block;
+  width: 10px;
+  line-height: 50px ;
+  margin : -10px;
+  text-align: center;
+}
+.check_input
+{
+  width: 400px;
+  height: 400px ;
+  vertical-align:-3px;
+}
+/* 출석 체크 버튼 라벨 관리  -> 형석  */

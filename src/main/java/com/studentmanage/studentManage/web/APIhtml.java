@@ -21,6 +21,16 @@ public class APIhtml {
         return "check";
     }
 
+    @RequestMapping(value = "/check_book", method = RequestMethod.GET)
+    public String check_book(){
+        return "check_book";
+    }
+
+    @RequestMapping(value = "/check_book_change", method = RequestMethod.GET)
+    public String check_book_change(){
+        return "check_book_change";
+    }
+
     @RequestMapping(value = "/subject_stuManage", method = RequestMethod.GET)
     public String subject_stuManage(){
         return "subject_stuManage";

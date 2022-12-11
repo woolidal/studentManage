@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -11,14 +10,11 @@
 
     <title>출석 체크</title>
 
-     Custom fonts for this template-->
-
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link
             href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
             rel="stylesheet">
 
-     Custom styles for this template
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
 
 </head>
@@ -332,17 +328,26 @@
                 <div>
                     <div>
                         <div class="mb-4">
-                            <input type='button' value = "출석" class ="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"
-                                   style = "width:100px ; height:50px;">
+                            <input type='button' id="my-button" value= "전체 출석 체크" class ="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"
+                                   style = "width:120px ; height:50px; margin: 12px">
+
+                            <input type='button' id="my-button_end" value= "전체 출석 해제" class ="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"
+                                   style = "width:120px ; height:50px; margin: 12px">
+
+                            <input type='button' id="my-button_end" value= "출석 저장" class ="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"
+                                   style = "width:120px ; height:50px; margin: 12px">
+
+                            <input  type='button' id="my-button_end" value= "전체 출석 현황" onclick="location.href='check_book'" class ="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"
+                                   style = "width:120px ; height:50px; margin: 12px">
                         </div>
                     </div>
                     <!-- Area Chart -->
-                    <div class="col-xl-auto col-lg-auto ">
+                    <div class="col-xl-12 col-lg-12 ">
                         <div class="card shadow mb-4">
                             <!-- Card Header - Dropdown -->
                             <div
                                     class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                <h6 class="m-0 font-weight-bold text-primary" >출석부</h6>
+                                <input type ="date" id=now_date class="m-0 font-weight-bold text-primary">
                                 <div class="dropdown no-arrow">
                                     <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -362,72 +367,63 @@
                             <div class="card-body">
                                 <div class="table-responsive" >
                                     <!-- 표 테두리선, 스트라이프, 내용 중앙정렬 /hus.kyeom -->
-                                    <table style="height: 1000px" class="table table-bordered table-striped text-center" id="dataTable" cellspacing="0" >
+                                    <table style="height: 1000px" class="table table-bordered table-striped text-center" cellspacing="0" >
                                         <thead>
                                         <tr>
-                                            <td style="text-align: center; width:150px ;">
-                                                <input type="checkbox"  id="all_check1" name="all_check" height="20px" checked >
-                                            </td>
-                                            <th style="text-align:center; margin:auto ; width:5%; height:20px">
+                                            <th style="text-align:center; margin:auto ; width:3%; height:20px">
                                                 <b>번호</b>
                                             </th>
-                                            <th style="text-align:center; margin:auto ; width:5%; height:20px">
+                                            <th style="text-align:center; margin:auto ; width:2%; height:20px">
                                                 <b>학생</b>
                                             </th>
-                                            <th style="text-align:center; margin:auto ; width:30%; height:10px">
+                                            <th style="text-align:center; width:22%; height:10px">
                                                 <b>출결 현황</b>
                                             </th>
-                                            <th >
+                                            <th style="text-align:center; width:15%; height:10px">
                                                 <b>출결 시간</b>
                                             </th >
-                                            <th>
+                                            <th style="text-align:center; width:10%; height:10px">
                                                 <b>사유</b>
                                             </th>
                                         </tr>
                                         </thead>
                                         <tbody>
                                         <tr >
-                                            <td style="text-align: center; vertical-align: middle;">
-                                               <input type="checkbox"  id="all_check2" name="all_check" style="width: 25px; height: 25px" checked >
-                                            </td>
-                                            <td style="text-align:center; width:5%; height:20px ; vertical-align: middle;">
+                                            <td style="text-align:center; width:5%; height:10px ; vertical-align: middle;">
                                                 1
                                             </td>
-                                            <td style="text-align:center; width:5%; height:20px ; vertical-align: middle;">
+                                            <td style="text-align:center; width:10%; height:10px ; vertical-align: middle;">
                                                 권민주
                                             </td>
-                                            <td style="text-align: center; vertical-align: middle;">
+                                            <td style="text-align: center; vertical-align: middle; width: 10px">
                                                 <div>
-                                                    <label style="display: inline-block ; width: 100px; line-height: 50px"><b>출석</b><br><input type="checkbox"  id="chk_k1" name="chk_setting" style="width: 25px; height: 25px" checked /></label>
-                                                    <label style="display: inline-block ; width: 100px; line-height: 50px"><b>지각</b><br><input type="checkbox"  id="chk_k2" name="chk_setting" style="width: 25px; height: 25px" checked /></label>
-                                                    <label style="display: inline-block ; width: 100px; line-height: 50px"><b>결석</b><br><input type="checkbox"  id="chk_k3" name="chk_setting" style="width: 25px; height: 25px" checked /></label>
-                                                    <label style="display: inline-block ; width: 100px; line-height: 50px"><b>조퇴</b><br><input type="checkbox"  id="chk_k4" name="chk_setting" style="width: 25px; height: 25px" checked /></label>
+                                                    <label class="check_label"><b>출석 : </b><input type="checkbox"  id="chk_k1" name="box1" value="1"  onclick="NoMultiChk1(this)" class="check_input" /></label>
+                                                    <label class="check_label"><b>지각 : </b><input type="checkbox"  id="chk_c2" name="box1" value="2"  onclick="NoMultiChk1(this)"  class="check_input" /></label>
+                                                    <label class="check_label"><b>결석 : </b><input type="checkbox"  id="chk_j3" name="box1" value="3"  onclick="NoMultiChk1(this)"  class="check_input" /></label>
+                                                    <label class="check_label"><b>조퇴 : </b><input type="checkbox"  id="chk_z4" name="box1" value="4"  onclick="NoMultiChk1(this)" class="check_input" /></label>
                                                 </div>
-                                            <td>
-
                                             </td>
 
+                                            <td id ="lated">
                                             </td>
                                             <td>
+                                                <input type="text" style="border:none ; width:200px; height:40px;">
                                             </td>
 
                                         </tr>
                                         <tr>
-                                            <td style="text-align:center; width:5%; height:20px ; vertical-align: middle;">
-                                                <input type="checkbox" id="all_check3" name="all_check"  style="width: 25px; height: 25px" checked>
-                                            </td>
                                             <td style="text-align:center; width:5%; height:20px ; vertical-align: middle;">
                                                 2
                                             </td>
                                             <td style="text-align:center; width:5%; height:20px ; vertical-align: middle;">
                                                 김석근
                                             </td>
-                                            <td  style="text-align: center; vertical-align: top;">
+                                            <td style="text-align: center; vertical-align: middle; width: 10px">
                                                 <div>
-                                                    <label style="display: inline-block ; width: 100px; line-height: 50px"><b>출석</b><br><input type="checkbox"  id="chk_k5" name="chk_setting" style="width: 25px; height: 25px" checked /></label>
-                                                    <label style="display: inline-block ; width: 100px; line-height: 50px"><b>지각</b><br><input type="checkbox"  id="chk_k6" name="chk_setting" style="width: 25px; height: 25px" checked /></label>
-                                                    <label style="display: inline-block ; width: 100px; line-height: 50px"><b>결석</b><br><input type="checkbox"  id="chk_k7" name="chk_setting" style="width: 25px; height: 25px" checked /></label>
-                                                    <label style="display: inline-block ; width: 100px; line-height: 50px"><b>조퇴</b><br><input type="checkbox"  id="chk_k8" name="chk_setting" style="width: 25px; height: 25px" checked /></label>
+                                                    <label class="check_label"><b>출석 : </b><input type="checkbox"  id="chk_k2" name="box2" value="1"  onclick="NoMultiChk2(this)" class="check_input" /></label>
+                                                    <label class="check_label"><b>지각 : </b><input type="checkbox"  id="chk_c2" name="box2" value="2"  onclick="NoMultiChk2(this)"  class="check_input" /></label>
+                                                    <label class="check_label"><b>결석 : </b><input type="checkbox"  id="chk_j3" name="box2" value="3"  onclick="NoMultiChk2(this)"  class="check_input" /></label>
+                                                    <label class="check_label"><b>조퇴 : </b><input type="checkbox"  id="chk_z4" name="box2" value="4"  onclick="NoMultiChk2(this)" class="check_input" /></label>
                                                 </div>
                                             </td>
                                             <td>-</td>
@@ -435,266 +431,338 @@
                                         </tr>
                                         <tr>
                                             <td style="text-align:center; width:5%; height:20px ; vertical-align: middle;">
-                                                <input type="checkbox" id="all_check4" name="all_check" style="width: 25px; height: 25px" checked>
-                                            </td>
-                                            <td style="text-align:center; width:5%; height:20px ; vertical-align: middle;">
                                                 3
                                             </td>
                                             <td style="text-align:center; width:5%; height:20px ; vertical-align: middle;">
                                                 김수겸
                                             </td>
-                                            <td>-</td>
+                                            <td style="text-align: center; vertical-align: middle; width: 10px">
+                                                <div>
+                                                    <label class="check_label"><b>출석 : </b><input type="checkbox"  id="chk_k3" name="box3" value="1"  onclick="NoMultiChk3(this)" class="check_input" /></label>
+                                                    <label class="check_label"><b>지각 : </b><input type="checkbox"  id="chk_c2" name="box3" value="2"  onclick="NoMultiChk3(this)"  class="check_input" /></label>
+                                                    <label class="check_label"><b>결석 : </b><input type="checkbox"  id="chk_j3" name="box3" value="3"  onclick="NoMultiChk3(this)"  class="check_input" /></label>
+                                                    <label class="check_label"><b>조퇴 : </b><input type="checkbox"  id="chk_z4" name="box3" value="4"  onclick="NoMultiChk3(this)" class="check_input" /></label>
+                                                </div>
+                                            </td>
                                             <td>-</td>
                                             <td>-</td>
                                         </tr>
                                         <tr>
-                                            <td style="text-align:center; width:5%; height:20px ; vertical-align: middle;">
-                                                <input type="checkbox" id="all_check5" name="all_check" style="width: 25px; height: 25px" checked>
-                                            </td>
                                             <td style="text-align:center; width:5%; height:20px ; vertical-align: middle;">
                                                 4
                                             </td>
                                             <td style="text-align:center; width:5%; height:20px ; vertical-align: middle;">
                                                 박성목
                                             </td>
-                                            <td>-</td>
+                                            <td style="text-align: center; vertical-align: middle; width: 10px">
+                                                <div>
+                                                    <label class="check_label"><b>출석 : </b><input type="checkbox"  id="chk_k4" name="box4" value="1"  onclick="NoMultiChk4(this)" class="check_input" /></label>
+                                                    <label class="check_label"><b>지각 : </b><input type="checkbox"  id="chk_c2" name="box4" value="2"  onclick="NoMultiChk4(this)"  class="check_input" /></label>
+                                                    <label class="check_label"><b>결석 : </b><input type="checkbox"  id="chk_j3" name="box4" value="3"  onclick="NoMultiChk4(this)"  class="check_input" /></label>
+                                                    <label class="check_label"><b>조퇴 : </b><input type="checkbox"  id="chk_z4" name="box4" value="4"  onclick="NoMultiChk4(this)" class="check_input" /></label>
+                                                </div>
+                                            </td>
                                             <td>-</td>
                                             <td>-</td>
                                         </tr>
                                         <tr>
-                                            <td style="text-align:center; width:5%; height:20px ; vertical-align: middle;">
-                                                <input type="checkbox" id="all_check6" name="all_check" style="width: 25px; height: 25px" checked>
-                                            </td>
                                             <td style="text-align:center; width:5%; height:20px ; vertical-align: middle;">
                                                 5
                                             </td>
                                             <td style="text-align:center; width:5%; height:20px ; vertical-align: middle;">
                                                 박혜지
                                             </td>
-                                            <td>-</td>
+                                            <td style="text-align: center; vertical-align: middle; width: 10px">
+                                                <div>
+                                                    <label class="check_label"><b>출석 : </b><input type="checkbox"  id="chk_k5" name="box5" value="1"  onclick="NoMultiChk5(this)" class="check_input" /></label>
+                                                    <label class="check_label"><b>지각 : </b><input type="checkbox"  id="chk_c2" name="box5" value="2"  onclick="NoMultiChk5(this)"  class="check_input" /></label>
+                                                    <label class="check_label"><b>결석 : </b><input type="checkbox"  id="chk_j3" name="box5" value="3"  onclick="NoMultiChk5(this)"  class="check_input" /></label>
+                                                    <label class="check_label"><b>조퇴 : </b><input type="checkbox"  id="chk_z4" name="box5" value="4"  onclick="NoMultiChk5(this)" class="check_input" /></label>
+                                                </div>
+                                            </td>
                                             <td>-</td>
                                             <td>-</td>
                                         </tr>
                                         <tr>
-                                            <td style="text-align:center; width:5%; height:20px ; vertical-align: middle;">
-                                                <input type="checkbox" id="all_check7" name="all_check"style="width: 25px; height: 25px" checked>
-                                            </td>
                                             <td style="text-align:center; width:5%; height:20px ; vertical-align: middle;">
                                                 6
                                             </td>
                                             <td style="text-align:center; width:5%; height:20px ; vertical-align: middle;">
                                                 안상현
                                             </td>
-                                            <td>-</td>
+                                            <td style="text-align: center; vertical-align: middle; width: 10px">
+                                                <div>
+                                                    <label class="check_label"><b>출석 : </b><input type="checkbox"  id="chk_k6" name="box6" value="1"  onclick="NoMultiChk6(this)" class="check_input" /></label>
+                                                    <label class="check_label"><b>지각 : </b><input type="checkbox"  id="chk_c2" name="box6" value="2"  onclick="NoMultiChk6(this)"  class="check_input" /></label>
+                                                    <label class="check_label"><b>결석 : </b><input type="checkbox"  id="chk_j3" name="box6" value="3"  onclick="NoMultiChk6(this)"  class="check_input" /></label>
+                                                    <label class="check_label"><b>조퇴 : </b><input type="checkbox"  id="chk_z4" name="box6" value="4"  onclick="NoMultiChk6(this)" class="check_input" /></label>
+                                                </div>
+                                            </td>
                                             <td>-</td>
                                             <td>-</td>
                                         </tr>
                                         <tr>
-                                            <td style="text-align:center; width:5%; height:20px ; vertical-align: middle;">
-                                                <input type="checkbox" id="all_check8" name="all_check" style="width: 25px; height: 25px" checked>
-                                            </td>
                                             <td style="text-align:center; width:5%; height:20px ; vertical-align: middle;">
                                                 7
                                             </td>
                                             <td style="text-align:center; width:5%; height:20px ; vertical-align: middle;">
                                                 이유진
                                             </td>
-                                            <td>-</td>
+                                            <td style="text-align: center; vertical-align: middle; width: 10px">
+                                                <div>
+                                                    <label class="check_label"><b>출석 : </b><input type="checkbox"  id="chk_k7" name="box7" value="1"  onclick="NoMultiChk7(this)" class="check_input" /></label>
+                                                    <label class="check_label"><b>지각 : </b><input type="checkbox"  id="chk_c2" name="box7" value="2"  onclick="NoMultiChk7(this)"  class="check_input" /></label>
+                                                    <label class="check_label"><b>결석 : </b><input type="checkbox"  id="chk_j3" name="box7" value="3"  onclick="NoMultiChk7(this)"  class="check_input" /></label>
+                                                    <label class="check_label"><b>조퇴 : </b><input type="checkbox"  id="chk_z4" name="box7" value="4"  onclick="NoMultiChk7(this)" class="check_input" /></label>
+                                                </div>
+                                            </td>
                                             <td>-</td>
                                             <td>-</td>
                                         </tr>
 
                                         <tr>
-                                            <td style="text-align:center; width:5%; height:20px ; vertical-align: middle;">
-                                                <input type="checkbox" id="all_check9" name="all_check"style="width: 25px; height: 25px" checked>
-                                            </td>
                                             <td style="text-align:center; width:5%; height:20px ; vertical-align: middle;">
                                                 8
                                             </td>
                                             <td style="text-align:center; width:5%; height:20px ; vertical-align: middle;">
                                                 이응규
                                             </td>
-                                            <td>-</td>
+                                            <td style="text-align: center; vertical-align: middle; width: 10px">
+                                                <div>
+                                                    <label class="check_label"><b>출석 : </b><input type="checkbox"  id="chk_k8" name="box8" value="1"  onclick="NoMultiChk8(this)" class="check_input" /></label>
+                                                    <label class="check_label"><b>지각 : </b><input type="checkbox"  id="chk_c2" name="box8" value="2"  onclick="NoMultiChk8(this)"  class="check_input" /></label>
+                                                    <label class="check_label"><b>결석 : </b><input type="checkbox"  id="chk_j3" name="box8" value="3"  onclick="NoMultiChk8(this)"  class="check_input" /></label>
+                                                    <label class="check_label"><b>조퇴 : </b><input type="checkbox"  id="chk_z4" name="box8" value="4"  onclick="NoMultiChk8(this)" class="check_input" /></label>
+                                                </div>
+                                            </td>
                                             <td>-</td>
                                             <td>-</td>
                                         </tr>
 
                                         <tr>
-                                            <td style="text-align:center; width:5%; height:20px ; vertical-align: middle;">
-                                                <input type="checkbox" id="all_check10" name="all_check" style="width: 25px; height: 25px" checked>
-                                            </td>
                                             <td style="text-align:center; width:5%; height:20px ; vertical-align: middle;">
                                                 9
                                             </td>
                                             <td style="text-align:center; width:5%; height:20px ; vertical-align: middle;">
                                                 이지은
                                             </td>
-                                            <td>-</td>
+                                            <td style="text-align: center; vertical-align: middle; width: 10px">
+                                                <div>
+                                                    <label class="check_label"><b>출석 : </b><input type="checkbox"  id="chk_k9" name="box9" value="1"  onclick="NoMultiChk9(this)" class="check_input" /></label>
+                                                    <label class="check_label"><b>지각 : </b><input type="checkbox"  id="chk_c2" name="box9" value="2"  onclick="NoMultiChk9(this)"  class="check_input" /></label>
+                                                    <label class="check_label"><b>결석 : </b><input type="checkbox"  id="chk_j3" name="box9" value="3"  onclick="NoMultiChk9(this)"  class="check_input" /></label>
+                                                    <label class="check_label"><b>조퇴 : </b><input type="checkbox"  id="chk_z4" name="box9" value="4"  onclick="NoMultiChk9(this)" class="check_input" /></label>
+                                                </div>
+                                            </td>
                                             <td>-</td>
                                             <td>-</td>
                                         </tr>
 
                                         <tr>
-                                            <td style="text-align:center; width:5%; height:20px ; vertical-align: middle;">
-                                                <input type="checkbox" id="all_check11" name="all_check" style="width: 25px; height: 25px" checked>
-                                            </td>
                                             <td style="text-align:center; width:5%; height:20px ; vertical-align: middle;">
                                                 10
                                             </td>
                                             <td style="text-align:center; width:5%; height:20px ; vertical-align: middle;">
                                                 장지혜
                                             </td>
-                                            <td>-</td>
+                                            <td style="text-align: center; vertical-align: middle; width: 10px">
+                                                <div>
+                                                    <label class="check_label"><b>출석 : </b><input type="checkbox"  id="chk_k10" name="box10" value="1"  onclick="NoMultiChk10(this)" class="check_input" /></label>
+                                                    <label class="check_label"><b>지각 : </b><input type="checkbox"  id="chk_c2" name="box10" value="2"  onclick="NoMultiChk10(this)"  class="check_input" /></label>
+                                                    <label class="check_label"><b>결석 : </b><input type="checkbox"  id="chk_j3" name="box10" value="3"  onclick="NoMultiChk10(this)"  class="check_input" /></label>
+                                                    <label class="check_label"><b>조퇴 : </b><input type="checkbox"  id="chk_z4" name="box10" value="4"  onclick="NoMultiChk10(this)" class="check_input" /></label>
+                                                </div>
+                                            </td>
                                             <td>-</td>
                                             <td>-</td>
                                         </tr>
 
                                         <tr>
-                                            <td style="text-align:center; width:5%; height:20px ; vertical-align: middle;">
-                                                <input type="checkbox" id="all_check12" name="all_check" style="width: 25px; height: 25px" checked>
-                                            </td>
                                             <td style="text-align:center; width:5%; height:20px ; vertical-align: middle;">
                                                 11
                                             </td>
                                             <td style="text-align:center; width:5%; height:20px ; vertical-align: middle;">
                                                 정윤수
                                             </td>
-                                            <td>-</td>
+                                            <td style="text-align: center; vertical-align: middle; width: 10px">
+                                                <div>
+                                                    <label class="check_label"><b>출석 : </b><input type="checkbox"  id="chk_k11" name="box11" value="1"  onclick="NoMultiChk11(this)" class="check_input" /></label>
+                                                    <label class="check_label"><b>지각 : </b><input type="checkbox"  id="chk_c2" name="box11" value="2"  onclick="NoMultiChk11(this)"  class="check_input" /></label>
+                                                    <label class="check_label"><b>결석 : </b><input type="checkbox"  id="chk_j3" name="box11" value="3"  onclick="NoMultiChk11(this)"  class="check_input" /></label>
+                                                    <label class="check_label"><b>조퇴 : </b><input type="checkbox"  id="chk_z4" name="box11" value="4"  onclick="NoMultiChk11(this)" class="check_input" /></label>
+                                                </div>
+                                            </td>
                                             <td>-</td>
                                             <td>-</td>
                                         </tr>
 
                                         <tr>
-                                            <td style="text-align:center; width:5%; height:20px ; vertical-align: middle;">
-                                                <input type="checkbox" id="all_check14" name="all_check" style="width: 25px; height: 25px" checked>
-                                            </td>
                                             <td style="text-align:center; width:5%; height:20px ; vertical-align: middle;">
                                                 12
                                             </td>
                                             <td style="text-align:center; width:5%; height:20px ; vertical-align: middle;">
                                                 조형석
                                             </td>
-                                            <td>-</td>
+                                            <td style="text-align: center; vertical-align: middle; width: 10px">
+                                                <div>
+                                                    <label class="check_label"><b>출석 : </b><input type="checkbox"  id="chk_k12" name="box12" value="1"  onclick="NoMultiChk12(this)" class="check_input" /></label>
+                                                    <label class="check_label"><b>지각 : </b><input type="checkbox"  id="chk_c2" name="box12" value="2"  onclick="NoMultiChk12(this)"  class="check_input" /></label>
+                                                    <label class="check_label"><b>결석 : </b><input type="checkbox"  id="chk_j3" name="box12" value="3"  onclick="NoMultiChk12(this)"  class="check_input" /></label>
+                                                    <label class="check_label"><b>조퇴 : </b><input type="checkbox"  id="chk_z4" name="box12" value="4"  onclick="NoMultiChk12(this)" class="check_input" /></label>
+                                                </div>
+                                            </td>
                                             <td>-</td>
                                             <td>-</td>
                                         </tr>
 
                                         <tr>
-                                            <td style="text-align:center; width:5%; height:20px ; vertical-align: middle;">
-                                                <input type="checkbox" id="all_check15" name="all_check" style="width: 25px; height: 25px" checked>
-                                            </td>
                                             <td style="text-align:center; width:5%; height:20px ; vertical-align: middle;">
                                                 13
                                             </td>
                                             <td style="text-align:center; width:5%; height:20px ; vertical-align: middle;">
                                                 채수명
                                             </td>
-                                            <td>-</td>
+                                            <td style="text-align: center; vertical-align: middle; width: 10px">
+                                            <div>
+                                                <label class="check_label"><b>출석 : </b><input type="checkbox"  id="chk_k13" name="box13" value="1"  onclick="NoMultiChk13(this)" class="check_input" /></label>
+                                                <label class="check_label"><b>지각 : </b><input type="checkbox"  id="chk_c2" name="box13" value="2"  onclick="NoMultiChk13(this)"  class="check_input" /></label>
+                                                <label class="check_label"><b>결석 : </b><input type="checkbox"  id="chk_j3" name="box13" value="3"  onclick="NoMultiChk13(this)"  class="check_input" /></label>
+                                                <label class="check_label"><b>조퇴 : </b><input type="checkbox"  id="chk_z4" name="box13" value="4"  onclick="NoMultiChk13(this)" class="check_input" /></label>
+                                            </div>
+                                            </td>
                                             <td>-</td>
                                             <td>-</td>
                                         </tr>
 
                                         <tr>
-                                            <td style="text-align:center; width:5%; height:20px ; vertical-align: middle;">
-                                                <input type="checkbox" id="all_check16" name="all_check" style="width: 25px; height: 25px" checked>
-                                            </td>
                                             <td style="text-align:center; width:5%; height:20px ; vertical-align: middle;">
                                                 14
                                             </td>
                                             <td style="text-align:center; width:5%; height:20px ; vertical-align: middle;">
                                                 천민기
                                             </td>
-                                            <td>-</td>
+                                            <td style="text-align: center; vertical-align: middle; width: 10px">
+                                            <div>
+                                                <label class="check_label"><b>출석 : </b><input type="checkbox"  id="chk_k14" name="box14" value="1"  onclick="NoMultiChk14(this)" class="check_input" /></label>
+                                                <label class="check_label"><b>지각 : </b><input type="checkbox"  id="chk_c2" name="box14" value="2"  onclick="NoMultiChk14(this)"  class="check_input" /></label>
+                                                <label class="check_label"><b>결석 : </b><input type="checkbox"  id="chk_j3" name="box14" value="3"  onclick="NoMultiChk14(this)"  class="check_input" /></label>
+                                                <label class="check_label"><b>조퇴 : </b><input type="checkbox"  id="chk_z4" name="box14" value="4"  onclick="NoMultiChk14(this)" class="check_input" /></label>
+                                            </div>
+                                            </td>
                                             <td>-</td>
                                             <td>-</td>
                                         </tr>
 
                                         <tr>
-                                            <td style="text-align:center; width:5%; height:20px ; vertical-align: middle;">
-                                                <input type="checkbox" id="all_check17" name="all_check" style="width: 25px; height: 25px" checked>
-                                            </td>
                                             <td style="text-align:center; width:5%; height:20px ; vertical-align: middle;">
                                                 15
                                             </td>
                                             <td style="text-align:center; width:5%; height:20px ; vertical-align: middle;">
                                                 최지원
                                             </td>
-                                            <td>-</td>
+                                            <td style="text-align: center; vertical-align: middle; width: 10px">
+                                            <div>
+                                                <label class="check_label"><b>출석 : </b><input type="checkbox"  id="chk_k15" name="box15" value="1"  onclick="NoMultiChk15(this)" class="check_input" /></label>
+                                                <label class="check_label"><b>지각 : </b><input type="checkbox"  id="chk_c2" name="box15" value="2"  onclick="NoMultiChk15(this)"  class="check_input" /></label>
+                                                <label class="check_label"><b>결석 : </b><input type="checkbox"  id="chk_j3" name="box15" value="3"  onclick="NoMultiChk15(this)"  class="check_input" /></label>
+                                                <label class="check_label"><b>조퇴 : </b><input type="checkbox"  id="chk_z4" name="box15" value="4"  onclick="NoMultiChk15(this)" class="check_input" /></label>
+                                            </div>
+                                            </td>
                                             <td>-</td>
                                             <td>-</td>
                                         </tr>
 
                                         <tr>
-                                            <td style="text-align:center; width:5%; height:20px ; vertical-align: middle;">
-                                                <input type="checkbox" id="all_check18" name="all_check" style="width: 25px; height: 25px" checked>
-                                            </td>
                                             <td style="text-align:center; width:5%; height:20px ; vertical-align: middle;">
                                                 16
                                             </td>
                                             <td style="text-align:center; width:5%; height:20px ; vertical-align: middle;">
                                                 최지우
                                             </td>
-                                            <td>-</td>
+                                            <td style="text-align: center; vertical-align: middle; width: 10px">
+                                            <div>
+                                                <label class="check_label"><b>출석 : </b><input type="checkbox"  id="chk_k16" name="box16" value="1"  onclick="NoMultiChk16(this)" class="check_input" /></label>
+                                                <label class="check_label"><b>지각 : </b><input type="checkbox"  id="chk_c2" name="box16" value="2"  onclick="NoMultiChk16(this)"  class="check_input" /></label>
+                                                <label class="check_label"><b>결석 : </b><input type="checkbox"  id="chk_j3" name="box16" value="3"  onclick="NoMultiChk16(this)"  class="check_input" /></label>
+                                                <label class="check_label"><b>조퇴 : </b><input type="checkbox"  id="chk_z4" name="box16" value="4"  onclick="NoMultiChk16(this)" class="check_input" /></label>
+                                            </div>
+                                            </td>
                                             <td>-</td>
                                             <td>-</td>
                                         </tr>
 
                                         <tr>
-                                            <td style="text-align:center; width:5%; height:20px ; vertical-align: middle;">
-                                                <input type="checkbox" id="all_check19" name="all_check" style="width: 25px; height: 25px" checked>
-                                            </td>
                                             <td style="text-align:center; width:5%; height:20px ; vertical-align: middle;">
                                                 17
                                             </td>
                                             <td style="text-align:center; width:5%; height:20px ; vertical-align: middle;">
                                                 채동한
                                             </td>
-                                            <td>-</td>
+                                            <td style="text-align: center; vertical-align: middle; width: 10px">
+                                            <div>
+                                                <label class="check_label"><b>출석 : </b><input type="checkbox"  id="chk_k17" name="box17" value="1"  onclick="NoMultiChk17(this)" class="check_input" /></label>
+                                                <label class="check_label"><b>지각 : </b><input type="checkbox"  id="chk_c2" name="box17" value="2"  onclick="NoMultiChk17(this)"  class="check_input" /></label>
+                                                <label class="check_label"><b>결석 : </b><input type="checkbox"  id="chk_j3" name="box17" value="3"  onclick="NoMultiChk17(this)"  class="check_input" /></label>
+                                                <label class="check_label"><b>조퇴 : </b><input type="checkbox"  id="chk_z4" name="box17" value="4"  onclick="NoMultiChk17(this)" class="check_input" /></label>
+                                            </div>
+                                            </td>
                                             <td>-</td>
                                             <td>-</td>
                                         </tr>
 
                                         <tr>
-                                            <td style="text-align:center; width:5%; height:20px ; vertical-align: middle;">
-                                                <input type="checkbox" id="all_check20" name="all_check" style="width: 25px; height: 25px" checked>
-                                            </td>
                                             <td style="text-align:center; width:5%; height:20px ; vertical-align: middle;">
                                                 18
                                             </td>
                                             <td style="text-align:center; width:5%; height:20px ; vertical-align: middle;">
                                                 최혜원
                                             </td>
-                                            <td>-</td>
+                                            <td style="text-align: center; vertical-align: middle; width: 10px">
+                                            <div>
+                                                <label class="check_label"><b>출석 : </b><input type="checkbox"  id="chk_k18" name="box18" value="1"  onclick="NoMultiChk18(this)" class="check_input" /></label>
+                                                <label class="check_label"><b>지각 : </b><input type="checkbox"  id="chk_c2" name="box18" value="2"  onclick="NoMultiChk18(this)"  class="check_input" /></label>
+                                                <label class="check_label"><b>결석 : </b><input type="checkbox"  id="chk_j3" name="box18" value="3"  onclick="NoMultiChk18(this)"  class="check_input" /></label>
+                                                <label class="check_label"><b>조퇴 : </b><input type="checkbox"  id="chk_z4" name="box18" value="4"  onclick="NoMultiChk18(this)" class="check_input" /></label>
+                                            </div>
+                                            </td>
                                             <td>-</td>
                                             <td>-</td>
                                         </tr>
 
                                         <tr>
-                                            <td style="text-align:center; width:5%; height:20px ; vertical-align: middle;">
-                                                <input type="checkbox" id="all_check21" name="all_check" style="width: 25px; height: 25px" checked>
-                                            </td>
                                             <td style="text-align:center; width:5%; height:20px ; vertical-align: middle;">
                                                 19
                                             </td>
                                             <td style="text-align:center; width:5%; height:20px ; vertical-align: middle;">
                                                 최동훈
                                             </td>
-                                            <td>-</td>
+                                            <td style="text-align: center; vertical-align: middle; width: 10px">
+                                            <div>
+                                                <label class="check_label"><b>출석 : </b><input type="checkbox"  id="chk_k19" name="box19" value="1"  onclick="NoMultiChk19(this)" class="check_input" /></label>
+                                                <label class="check_label"><b>지각 : </b><input type="checkbox"  id="chk_c2" name="box19" value="2"  onclick="NoMultiChk19(this)"  class="check_input" /></label>
+                                                <label class="check_label"><b>결석 : </b><input type="checkbox"  id="chk_j3" name="box19" value="3"  onclick="NoMultiChk19(this)"  class="check_input" /></label>
+                                                <label class="check_label"><b>조퇴 : </b><input type="checkbox"  id="chk_z4" name="box19" value="4"  onclick="NoMultiChk19(this)" class="check_input" /></label>
+                                            </div>
+                                            </td>
                                             <td>-</td>
                                             <td>-</td>
                                         </tr>
 
                                         <tr>
                                             <td style="text-align:center; width:5%; height:20px ; vertical-align: middle;">
-                                                <input type="checkbox" id="all_check22" name="all_check" style="width: 25px; height: 25px" checked>
-                                            </td>
-                                            <td style="text-align:center; width:5%; height:20px ; vertical-align: middle;">
                                                 20
                                             </td>
                                             <td style="text-align:center; width:5%; height:20px ; vertical-align: middle;">
                                                 채시우
                                             </td>
-                                            <td>-</td>
+                                            <td style="text-align: center; vertical-align: middle; width: 10px">
+                                            <div>
+                                                <label class="check_label"><b>출석 : </b><input type="checkbox"  id="chk_k20" name="box20" value="1"  onclick="NoMultiChk20(this)" class="check_input" /></label>
+                                                <label class="check_label"><b>지각 : </b><input type="checkbox"  id="chk_c2" name="box20" value="2"  onclick="NoMultiChk20(this)"  class="check_input" /></label>
+                                                <label class="check_label"><b>결석 : </b><input type="checkbox"  id="chk_j3" name="box20" value="3"  onclick="NoMultiChk20(this)"  class="check_input" /></label>
+                                                <label class="check_label"><b>조퇴 : </b><input type="checkbox"  id="chk_z4" name="box20" value="4"  onclick="NoMultiChk20(this)" class="check_input" /></label>
+                                            </div>
+                                            </td>
                                             <td>-</td>
                                             <td>-</td>
                                         </tr>
@@ -711,27 +779,27 @@
                     </div>
 
                 </div>
-                    </div>
-                </div>
-
             </div>
-            <!-- /.container-fluid -->
-
         </div>
-        <!-- End of Main Content -->
-
-        <!-- Footer -->
-        <footer class="sticky-footer bg-white">
-            <div class="container my-auto">
-                <div class="copyright text-center my-auto">
-                    <span>Copyright &copy; FOR T</span>
-                </div>
-            </div>
-        </footer>
-        <!-- End of Footer -->
 
     </div>
-    <!-- End of Content Wrapper -->
+    <!-- /.container-fluid -->
+
+</div>
+<!-- End of Main Content -->
+
+<!-- Footer -->
+<footer class="sticky-footer bg-white">
+    <div class="container my-auto">
+        <div class="copyright text-center my-auto">
+            <span>Copyright &copy; FOR T</span>
+        </div>
+    </div>
+</footer>
+<!-- End of Footer -->
+
+</div>
+<!-- End of Content Wrapper -->
 
 </div>
 <!-- End of Page Wrapper -->
@@ -782,6 +850,11 @@
 <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
 <script src="js/demo/datatables-demo.js"></script>
 <script src="js/calendar.js"></script>
+<script src="js/check_box.js"></script>
+<script src="js/check_radio.js"></script>
+<script src="js/check_late.js"></script>
+<script src="js/check_date.js"></script>
+
 </body>
 
 </html>
