@@ -56,6 +56,10 @@ public class APIhtml {
     @RequestMapping(value = "subject_seat3_5", method = RequestMethod.GET)
     public String subject_seat3_5() { return "subject_seat3_5"; }
 
+    @RequestMapping(value = "/class_stuManage", method = RequestMethod.GET)
+    public String class_stuManage(){
+        return "class_stuManage";
+    }
     @RequestMapping(value = "/class_stuManage1", method = RequestMethod.GET)
     public String class_stuManage1(){
         return "class_stuManage1";
