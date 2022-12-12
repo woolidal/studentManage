@@ -17,4 +17,16 @@ public class WebController {
 
         return "index";
     }
+
+    @RequestMapping("/class_stuManage1")
+    public String class_stuManage1(){
+
+        return "class_stuManage1";
+    }
+
+    @RequestMapping("/class_stuManage2")
+    public String class_stuManage2(){
+
+        return "class_stuManage2";
+    }
 }
