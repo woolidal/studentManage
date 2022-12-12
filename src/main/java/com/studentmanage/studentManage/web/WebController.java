@@ -75,4 +75,24 @@ public class WebController {
 
     @RequestMapping("/subject_seat")
     public String sbjseat() { return "subject_seat"; }
+
+    @RequestMapping("/subject_seat2_1")
+    public String subject_seat2_1() {
+        return "subject_seat2_1";
+    }
+
+    @RequestMapping("/subject_seat2_3")
+    public String subject_seat2_3() {
+        return "subject_seat2_3";
+    }
+
+    @RequestMapping("/subject_seat3_1")
+    public String subject_seat3_1() {
+        return "subject_seat3_1";
+    }
+
+    @RequestMapping("/subject_seat3_5")
+    public String subject_seat3_5() {
+        return "subject_seat3_5";
+    }
 }
