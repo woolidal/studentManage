@@ -121,4 +121,11 @@ public class WebController {
         return "class_stuManage2";
     }
 
+    @RequestMapping("/class_seat_edit_gara")
+    public String gara() { return "class_seat_edit_gara"; }
+
+    @RequestMapping("/class_seat_")
+    public String class_seat_change() {
+        return "class_seat_change";
+    }
 }
