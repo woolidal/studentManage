@@ -44,4 +44,8 @@ public class APIhtml {
     @RequestMapping(value = "subject_seat", method = RequestMethod.GET)
     public String sbjseat() { return "subject_seat"; }
 
+    @RequestMapping(value = "/studentmanage", method = RequestMethod.GET)
+    public String studentmanage(){
+        return "studentmanage";
+    }
 }
