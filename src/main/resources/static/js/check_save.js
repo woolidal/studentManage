@@ -1,8 +1,111 @@
-document.getElementById("my-button_save").onclick = function(chk) {
-    let num = document.getElementById("chk_k1").checked;
-    localStorage.setItem("chk1", num);
-    if (localStorage.getItem("chk1") === true)
-    {
-        document.getElementById("chk_k1").checked ;
-    }
+document.getElementById("my-button_ee").onclick = function(chk) {
+   let now = new Date();
+   //let month = now.getMonth()+1;
+   let month =14;
+   alert(month+"일 출석이 적용됩니다.");
+   if (month === 14)
+   {
+      document.getElementById("14_01").innerText="●";
+      document.getElementById("14_02").innerText="●";
+      document.getElementById("14_03").innerText="●"
+      document.getElementById("14_04").innerText="●"
+      document.getElementById("14_05").innerText="●"
+      document.getElementById("14_06").innerText="●"
+      document.getElementById("14_07").innerText="●"
+      document.getElementById("14_08").innerText="●"
+      document.getElementById("14_09").innerText="●"
+      document.getElementById("14_10").innerText="●"
+      document.getElementById("14_11").innerText="●"
+      document.getElementById("14_12").innerText="●"
+      document.getElementById("14_13").innerText="●"
+      document.getElementById("14_14").innerText="●"
+      document.getElementById("14_15").innerText="●"
+      document.getElementById("14_16").innerText="●"
+      document.getElementById("14_17").innerText="●"
+      document.getElementById("14_18").innerText="●"
+      document.getElementById("14_19").innerText="●"
+      document.getElementById("14_20").innerText="●"
+      document.getElementById("14_21").innerText="●"
+      document.getElementById("14_22").innerText="●"
+      document.getElementById("14_23").innerText="●"
+      document.getElementById("14_24").innerText="●"
+      document.getElementById("14_25").innerText="●"
+      document.getElementById("14_26").innerText="●"
+      document.getElementById("14_27").innerText="●"
+      document.getElementById("14_28").innerText="●"
+      document.getElementById("14_29").innerText="●"
+      document.getElementById("14_30").innerText="●"
+      document.getElementById("14_31").innerText="●"
+
+   }
+   if (month === 15)
+   {
+      document.getElementById("15_01").innerText="●"
+      document.getElementById("15_02").innerText="●"
+      document.getElementById("15_03").innerText="●"
+      document.getElementById("15_04").innerText="●"
+      document.getElementById("15_05").innerText="●"
+      document.getElementById("15_06").innerText="●"
+      document.getElementById("15_07").innerText="●"
+      document.getElementById("15_08").innerText="●"
+      document.getElementById("15_09").innerText="●"
+      document.getElementById("15_10").innerText="●"
+      document.getElementById("15_11").innerText="●"
+      document.getElementById("15_12").innerText="●"
+      document.getElementById("15_13").innerText="●"
+      document.getElementById("15_14").innerText="●"
+      document.getElementById("15_15").innerText="●"
+      document.getElementById("15_16").innerText="●"
+      document.getElementById("15_17").innerText="●"
+      document.getElementById("15_18").innerText="●"
+      document.getElementById("15_19").innerText="●"
+      document.getElementById("15_20").innerText="●"
+      document.getElementById("15_21").innerText="●"
+      document.getElementById("15_22").innerText="●"
+      document.getElementById("15_23").innerText="●"
+      document.getElementById("15_24").innerText="●"
+      document.getElementById("15_25").innerText="●"
+      document.getElementById("15_26").innerText="●"
+      document.getElementById("15_27").innerText="●"
+      document.getElementById("15_28").innerText="●"
+      document.getElementById("15_29").innerText="●"
+      document.getElementById("15_30").innerText="●"
+      document.getElementById("15_31").innerText="●"
+
+   }
+   if (month === 16)
+   {
+      document.getElementById("16_01").innerText="●"
+      document.getElementById("16_02").innerText="●"
+      document.getElementById("16_03").innerText="●"
+      document.getElementById("16_04").innerText="●"
+      document.getElementById("16_05").innerText="●"
+      document.getElementById("16_06").innerText="●"
+      document.getElementById("16_07").innerText="●"
+      document.getElementById("16_08").innerText="●"
+      document.getElementById("16_09").innerText="●"
+      document.getElementById("16_10").innerText="●"
+      document.getElementById("16_11").innerText="●"
+      document.getElementById("16_12").innerText="●"
+      document.getElementById("16_13").innerText="●"
+      document.getElementById("16_14").innerText="●"
+      document.getElementById("16_15").innerText="●"
+      document.getElementById("16_16").innerText="●"
+      document.getElementById("16_17").innerText="●"
+      document.getElementById("16_18").innerText="●"
+      document.getElementById("16_19").innerText="●"
+      document.getElementById("16_20").innerText="●"
+      document.getElementById("16_21").innerText="●"
+      document.getElementById("16_22").innerText="●"
+      document.getElementById("16_23").innerText="●"
+      document.getElementById("16_24").innerText="●"
+      document.getElementById("16_25").innerText="●"
+      document.getElementById("16_26").innerText="●"
+      document.getElementById("16_27").innerText="●"
+      document.getElementById("16_28").innerText="●"
+      document.getElementById("16_29").innerText="●"
+      document.getElementById("16_30").innerText="●"
+      document.getElementById("16_31").innerText="●"
+
+   }
 }
