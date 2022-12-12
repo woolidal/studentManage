@@ -66,4 +66,7 @@ public class APIhtml {
         return "class_stuManage2";
     }
 
+    @RequestMapping(value = "/class_seat_edit_gara", method = RequestMethod.GET)
+    public String gara() { return "class_seat_edit_gara"; }
+
 }
