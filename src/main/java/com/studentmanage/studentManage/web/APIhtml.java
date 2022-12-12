@@ -44,4 +44,16 @@ public class APIhtml {
     @RequestMapping(value = "subject_seat", method = RequestMethod.GET)
     public String sbjseat() { return "subject_seat"; }
 
+    @RequestMapping(value = "subject_seat2_1", method = RequestMethod.GET)
+    public String subject_seat2_1() { return "subject_seat2_1"; }
+
+    @RequestMapping(value = "subject_seat2_3", method = RequestMethod.GET)
+    public String subject_seat2_3() { return "subject_seat2_3"; }
+
+    @RequestMapping(value = "subject_seat3_1", method = RequestMethod.GET)
+    public String subject_seat3_1() { return "subject_seat3_1"; }
+
+    @RequestMapping(value = "subject_seat3_5", method = RequestMethod.GET)
+    public String subject_seat3_5() { return "subject_seat3_5"; }
+
 }
