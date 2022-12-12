@@ -101,4 +101,15 @@ public class WebController {
     public String subject_seat3_5() {
         return "subject_seat3_5";
     }
+
+    @RequestMapping("/class_stuManage1")
+    public String class_stuManage1() {
+        return "class_stuManage1";
+    }
+
+    @RequestMapping("/class_stuManage2")
+    public String class_stuManage2() {
+        return "class_stuManage2";
+    }
+
 }
