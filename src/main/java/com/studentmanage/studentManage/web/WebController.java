@@ -32,6 +32,11 @@ public class WebController {
 
         return "check_book_change";
     }
+    @RequestMapping("/check_book_change.")
+    public String check_book_change1(){
+
+        return "check_book_change1";
+    }
 
     @RequestMapping("/subject_stuManage")
     public String subject_stuManage(){
