@@ -1,7 +1,6 @@
 document.getElementById("my-button_ee").onclick = function(chk) {
    let now = new Date();
-   //let month = now.getMonth()+1;
-   let month =14;
+   let month = now.getDate();
    alert(month+"일 출석이 적용됩니다.");
    if (month === 14)
    {
