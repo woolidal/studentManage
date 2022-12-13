@@ -1,37 +1,41 @@
-function NoMultiChk1(element){
-        const checkboxes = document.getElementsByName("box1");
-    checkboxes.forEach((cb) => {
-        cb.checked = false;
-    })
-    element.checked = true;
-    const checkboxes2 = document.getElementById("chk_c2").checked;
-    if (checkboxes2 === true)
-    {
-        document.getElementById("lated").innerText="13:10"
-    }
-    else
-    {
-        document.getElementById("lated").innerText="없음"
+
+function progCheck1() {
+    const progCheck = document.getElementById("chk_1").checked;
+    if (progCheck === true) {
+        const date = new Date();
+        document.getElementById("pro1").innerText = date.toLocaleTimeString('ko-kr');
+    } else {
+        document.getElementById("pro1").innerText = "-";
     }
 }
-function NoMultiChk2(element){
-    const checkboxes = document.getElementsByName("box2");
-    checkboxes.forEach((cb) => {
-        cb.checked = false;
-    })
-    element.checked = true;
+
+function progCheck2() {
+    const progCheck = document.getElementById("chk_2").checked;
+    if (progCheck === true) {
+        const date = new Date();
+        document.getElementById("pro2").innerText = date.toLocaleTimeString('ko-kr');
+    } else {
+        document.getElementById("pro2").innerText = "-";
+    }
 }
-function NoMultiChk3(element){
-    const checkboxes = document.getElementsByName("box3");
-    checkboxes.forEach((cb) => {
-        cb.checked = false;
-    })
-    element.checked = true;
+
+function progCheck3() {
+    const progCheck = document.getElementById("chk_3").checked;
+    if (progCheck === true) {
+        const date = new Date();
+        document.getElementById("pro3").innerText = date.toLocaleTimeString('ko-kr');
+    } else {
+        document.getElementById("pro3").innerText = "-";
+    }
 }
-function NoMultiChk4(element){
-    const checkboxes = document.getElementsByName("box4");
-    checkboxes.forEach((cb) => {
-        cb.checked = false;
-    })
-    element.checked = true;
+
+function progCheck4() {
+    const progCheck = document.getElementById("chk_4").checked;
+    if (progCheck === true) {
+        const date = new Date();
+        document.getElementById("pro4").innerText = date.toLocaleTimeString('ko-kr');
+    } else {
+        document.getElementById("pro4").innerText = "-";
+    }
 }
+

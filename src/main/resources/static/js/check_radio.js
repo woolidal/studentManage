@@ -13,7 +13,7 @@ function NoMultiChk1(element){
     }
     else
     {
-        document.getElementById("lated").innerText="-"
+        document.getElementById("lated").innerText="-";
     }
 
 
@@ -33,7 +33,7 @@ function NoMultiChk2(element){
     }
     else
     {
-        document.getElementById("lated1").innerText="-"
+        document.getElementById("lated1").innerText="-";
     }
 
 }
