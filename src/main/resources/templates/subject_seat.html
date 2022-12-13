@@ -411,28 +411,72 @@
                 <div class="row">
 
                     <div class="col-xl-4 col-lg-4">
-                        <div class="card shadow mb-4">
-                            <div class="card-header py-3">
-                                <h6 class="m-0 font-weight-bold text-primary">Projects</h6>
+                        <div class="col">
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary">진도 현황</h6>
+                                </div>
+                                <div class="card-body">
+                                    <div class="chart-pie pt-4 pb-2">
+                                        <canvas id="plannedProgress" class="chartjs-render-monitor"></canvas>
+                                    </div>
+                                    <div class="mt-4 text-center small">
+                                        <span class="mr-2">
+                                            <i class="fas fa-circle text-primary"></i> 계획 상 진도
+                                        </span>
+<!--                                        <span class="mr-2">-->
+<!--                                            <i class="fas fa-circle text-secondary"></i> Referral-->
+<!--                                        </span>-->
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xl-6">
+                                    <div class="chart-pie pt-4 pb-2">
+                                        <canvas id="currentProgress" class="chartjs-render-monitor"></canvas>
+                                    </div>
+                                    <div class="mt-4 text-center small">
+                                        <span class="mr-2">
+                                            <i class="fas fa-circle text-warning"></i> 현재 진도
+                                        </span>
+                                    </div>
+                                        </div>
+                                        <div class="col-xl-6">
+                                    <div class="chart-pie pt-4 pb-2">
+                                        <canvas id="averageProgress" class="chartjs-render-monitor"></canvas>
+                                    </div>
+                                    <div class="mt-4 text-center small">
+                                        <span class="mr-2">
+                                            <i class="fas fa-circle text-info"></i> 평균 진도
+                                        </span>
+                                    </div>
+                                        </div>
+                                    </div>
+<!--                                    <h4 class="small font-weight-bold">계획 상 진도 <span-->
+<!--                                            class="float-right">50%</span></h4>-->
+<!--                                    <div class="progress mb-4">-->
+<!--                                        <div class="progress-bar" role="progressbar" style="width: 50%"-->
+<!--                                             aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>-->
+<!--                                    </div>-->
+
+<!--                                    <h4 class="small font-weight-bold">현재 진도 <span-->
+<!--                                            class="float-right">40%</span></h4>-->
+<!--                                    <div class="progress mb-4">-->
+<!--                                        <div class="progress-bar bg-warning" role="progressbar" style="width: 40%"-->
+<!--                                             aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>-->
+<!--                                    </div>-->
+<!--                                    <h4 class="small font-weight-bold">평균 진도 <span-->
+<!--                                            class="float-right">47%</span></h4>-->
+<!--                                    <div class="progress mb-4">-->
+<!--                                        <div class="progress-bar bg-info" role="progressbar" style="width: 47%"-->
+<!--                                             aria-valuenow="47" aria-valuemin="0" aria-valuemax="100"></div>-->
+<!--                                    </div>-->
+                                </div>
                             </div>
-                            <div class="card-body">
-                                <h4 class="small font-weight-bold">계획 상 진도 <span
-                                        class="float-right">50%</span></h4>
-                                <div class="progress mb-4">
-                                    <div class="progress-bar" role="progressbar" style="width: 50%"
-                                         aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary">진도 체크리스트</h6>
                                 </div>
-                                <h4 class="small font-weight-bold">현재 진도 <span
-                                        class="float-right">40%</span></h4>
-                                <div class="progress mb-4">
-                                    <div class="progress-bar bg-warning" role="progressbar" style="width: 40%"
-                                         aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                                <h4 class="small font-weight-bold">평균 진도 <span
-                                        class="float-right">47%</span></h4>
-                                <div class="progress mb-4">
-                                    <div class="progress-bar bg-info" role="progressbar" style="width: 47%"
-                                         aria-valuenow="47" aria-valuemin="0" aria-valuemax="100"></div>
+                                <div class="card-body">
+
                                 </div>
                             </div>
                         </div>
@@ -589,6 +633,9 @@
 
 <!— Page level plugins —>
 <script src="vendor/chart.js/Chart.min.js"></script>
+<script src="js/subject_planned_pie_chart.js"></script>
+<script src="js/subject_current_pie_chart.js"></script>
+<script src="js/subject_average_pie_chart.js"></script>
 
 <!— Page level custom scripts —>
 <script src="js/demo/chart-area-demo.js"></script>
