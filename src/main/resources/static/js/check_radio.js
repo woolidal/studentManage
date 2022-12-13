@@ -4,15 +4,19 @@ function NoMultiChk1(element){
         cb.checked = false;
     })
     element.checked = true;
+
     const checkboxes2 = document.getElementById("chk_c2").checked;
     if (checkboxes2 === true)
     {
-        document.getElementById("lated").innerText="13:10"
+        const date = new Date();
+        document.getElementById("lated").innerText =  date.toLocaleTimeString('ko-kr');
     }
     else
     {
-        document.getElementById("lated").innerText="없음"
+        document.getElementById("lated").innerText="-"
     }
+
+
 }
 function NoMultiChk2(element){
     const checkboxes = document.getElementsByName("box2");
@@ -20,6 +24,18 @@ function NoMultiChk2(element){
         cb.checked = false;
     })
     element.checked = true;
+
+    const checkboxes2 = document.getElementById("chk_c21").checked;
+    if (checkboxes2 === true)
+    {
+        const date = new Date();
+        document.getElementById("lated1").innerText =  date.toLocaleTimeString('ko-kr');
+    }
+    else
+    {
+        document.getElementById("lated1").innerText="-"
+    }
+
 }
 function NoMultiChk3(element){
     const checkboxes = document.getElementsByName("box3");

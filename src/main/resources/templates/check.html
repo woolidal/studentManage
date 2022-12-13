@@ -334,9 +334,6 @@
                             <input type='button' id="my-button_end" value= "전체 출석 해제" class ="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"
                                    style = "width:120px ; height:50px; margin: 12px">
 
-                            <input  type='button' id="my-button_save" value= "전체 출석 적용" class ="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"
-                                    style = "width:120px ; height:50px; margin: 12px">
-
                             <input  type='button' id="my-button_end" value= "전체 출석 현황" onclick="location.href='check_book'" class ="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"
                                    style = "width:120px ; height:50px; margin: 12px">
                         </div>
@@ -370,19 +367,19 @@
                                     <table style="height: 1000px" class="table table-bordered table-striped text-center" cellspacing="0" >
                                         <thead>
                                         <tr>
-                                            <th style="text-align:center; margin:auto ; width:3%; height:20px">
+                                            <th style="text-align:center; margin:auto ; width:1%; height:20px">
                                                 <b>번호</b>
                                             </th>
-                                            <th style="text-align:center; margin:auto ; width:2%; height:20px">
+                                            <th style="text-align:center; margin:auto ; width:1%; height:20px">
                                                 <b>학생</b>
                                             </th>
                                             <th style="text-align:center; width:22%; height:10px">
                                                 <b>출결 현황</b>
                                             </th>
-                                            <th style="text-align:center; width:15%; height:10px">
+                                            <th style="text-align:center; width:10%; height:10px">
                                                 <b>출결 시간</b>
                                             </th >
-                                            <th style="text-align:center; width:10%; height:10px">
+                                            <th style="text-align:center; width:15%; height:10px">
                                                 <b>사유</b>
                                             </th>
                                         </tr>
@@ -392,7 +389,7 @@
                                             <td style="text-align:center; width:5%; height:10px ; vertical-align: middle;">
                                                 1
                                             </td>
-                                            <td style="text-align:center; width:10%; height:10px ; vertical-align: middle;">
+                                            <td style="text-align:center; width:10%; height:10px ; vertical-align: middle">
                                                 강태현
                                             </td>
                                             <td style="text-align: center; vertical-align: middle; width: 10px">
@@ -407,7 +404,7 @@
                                             <td id ="lated">
                                             </td>
                                             <td>
-                                                <input type="text" style="border:none ; width:200px; height:40px;">
+                                                <input type="text" style="border: #5a5c69 solid ; width:200px; height:40px">
                                             </td>
 
                                         </tr>
@@ -421,13 +418,15 @@
                                             <td style="text-align: center; vertical-align: middle; width: 10px">
                                                 <div>
                                                     <label class="check_label"><b>출석 : </b><input type="checkbox"  id="chk_k2" name="box2" value="1"  onclick="NoMultiChk2(this)" class="check_input" /></label>
-                                                    <label class="check_label"><b>지각 : </b><input type="checkbox"  id="chk_c2" name="box2" value="2"  onclick="NoMultiChk2(this)"  class="check_input" /></label>
+                                                    <label class="check_label"><b>지각 : </b><input type="checkbox"  id="chk_c21" name="box2" value="2"  onclick="NoMultiChk2(this)"  class="check_input" /></label>
                                                     <label class="check_label"><b>결석 : </b><input type="checkbox"  id="chk_j3" name="box2" value="3"  onclick="NoMultiChk2(this)"  class="check_input" /></label>
                                                     <label class="check_label"><b>조퇴 : </b><input type="checkbox"  id="chk_z4" name="box2" value="4"  onclick="NoMultiChk2(this)" class="check_input" /></label>
                                                 </div>
                                             </td>
-                                            <td>-</td>
-                                            <td>-</td>
+                                            <td id ="lated1">-</td>
+                                            <td>
+                                                <input type="text" style="border: #5a5c69 solid; width:200px; height:40px;">
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td style="text-align:center; width:5%; height:20px ; vertical-align: middle;">
@@ -445,7 +444,9 @@
                                                 </div>
                                             </td>
                                             <td>-</td>
-                                            <td>-</td>
+                                            <td>
+                                                <input type="text" style="border: #5a5c69 solid; width:200px; height:40px;">
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td style="text-align:center; width:5%; height:20px ; vertical-align: middle;">
@@ -463,7 +464,9 @@
                                                 </div>
                                             </td>
                                             <td>-</td>
-                                            <td>-</td>
+                                            <td>
+                                                <input type="text" style="border: #5a5c69 solid ; width:200px; height:40px;">
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td style="text-align:center; width:5%; height:20px ; vertical-align: middle;">
@@ -481,7 +484,9 @@
                                                 </div>
                                             </td>
                                             <td>-</td>
-                                            <td>-</td>
+                                            <td>
+                                                <input type="text" style="border: #5a5c69 solid ; width:200px; height:40px;">
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td style="text-align:center; width:5%; height:20px ; vertical-align: middle;">
@@ -499,7 +504,9 @@
                                                 </div>
                                             </td>
                                             <td>-</td>
-                                            <td>-</td>
+                                            <td>
+                                                <input type="text" style="border: #5a5c69 solid; width:200px; height:40px;">
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td style="text-align:center; width:5%; height:20px ; vertical-align: middle;">
@@ -517,7 +524,9 @@
                                                 </div>
                                             </td>
                                             <td>-</td>
-                                            <td>-</td>
+                                            <td>
+                                                <input type="text" style="border: #5a5c69 solid ; width:200px; height:40px">
+                                            </td>
                                         </tr>
 
                                         <tr>
@@ -536,7 +545,9 @@
                                                 </div>
                                             </td>
                                             <td>-</td>
-                                            <td>-</td>
+                                            <td>
+                                                <input type="text" style="border: #5a5c69 solid ; width:200px; height:40px">
+                                            </td>
                                         </tr>
 
                                         <tr>
@@ -555,7 +566,9 @@
                                                 </div>
                                             </td>
                                             <td>-</td>
-                                            <td>-</td>
+                                            <td>
+                                                <input type="text" style="border: #5a5c69 solid ; width:200px; height:40px">
+                                            </td>
                                         </tr>
 
                                         <tr>
@@ -574,7 +587,9 @@
                                                 </div>
                                             </td>
                                             <td>-</td>
-                                            <td>-</td>
+                                            <td>
+                                                <input type="text" style="border: #5a5c69 solid ; width:200px; height:40px">
+                                            </td>
                                         </tr>
 
                                         <tr>
@@ -593,7 +608,9 @@
                                                 </div>
                                             </td>
                                             <td>-</td>
-                                            <td>-</td>
+                                            <td>
+                                                <input type="text" style="border: #5a5c69 solid ; width:200px; height:40px">
+                                            </td>
                                         </tr>
 
                                         <tr>
@@ -612,7 +629,9 @@
                                                 </div>
                                             </td>
                                             <td>-</td>
-                                            <td>-</td>
+                                            <td>
+                                                <input type="text" style="border: #5a5c69 solid ; width:200px; height:40px">
+                                            </td>
                                         </tr>
 
                                         <tr>
@@ -631,7 +650,9 @@
                                             </div>
                                             </td>
                                             <td>-</td>
-                                            <td>-</td>
+                                            <td>
+                                                <input type="text" style="border: #5a5c69 solid ; width:200px; height:40px">
+                                            </td>
                                         </tr>
 
                                         <tr>
@@ -650,7 +671,9 @@
                                             </div>
                                             </td>
                                             <td>-</td>
-                                            <td>-</td>
+                                            <td>
+                                                <input type="text" style="border: #5a5c69 solid ; width:200px; height:40px">
+                                            </td>
                                         </tr>
 
                                         <tr>
@@ -669,7 +692,9 @@
                                             </div>
                                             </td>
                                             <td>-</td>
-                                            <td>-</td>
+                                            <td>
+                                                <input type="text" style="border: #5a5c69 solid ; width:200px; height:40px">
+                                            </td>
                                         </tr>
 
                                         <tr>
@@ -688,7 +713,9 @@
                                             </div>
                                             </td>
                                             <td>-</td>
-                                            <td>-</td>
+                                            <td>
+                                                <input type="text" style="border: #5a5c69 solid ; width:200px; height:40px">
+                                            </td>
                                         </tr>
 
                                         <tr>
@@ -707,7 +734,9 @@
                                             </div>
                                             </td>
                                             <td>-</td>
-                                            <td>-</td>
+                                            <td>
+                                                <input type="text" style="border: #5a5c69 solid ; width:200px; height:40px">
+                                            </td>
                                         </tr>
 
                                         <tr>
@@ -726,7 +755,9 @@
                                             </div>
                                             </td>
                                             <td>-</td>
-                                            <td>-</td>
+                                            <td>
+                                                <input type="text" style="border: #5a5c69 solid ; width:200px; height:40px">
+                                            </td>
                                         </tr>
 
                                         <tr>
@@ -745,7 +776,9 @@
                                             </div>
                                             </td>
                                             <td>-</td>
-                                            <td>-</td>
+                                            <td>
+                                                <input type="text" style="border: #5a5c69 solid ; width:200px; height:40px">
+                                            </td>
                                         </tr>
 
                                         <tr>
@@ -764,7 +797,9 @@
                                             </div>
                                             </td>
                                             <td>-</td>
-                                            <td>-</td>
+                                            <td>
+                                                <input type="text" style="border: #5a5c69 solid ; width:200px; height:40px">
+                                            </td>
                                         </tr>
 
 
