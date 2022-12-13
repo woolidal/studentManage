@@ -433,370 +433,176 @@
                     </ul>
                   </div>
                   <div class="card-body">
-                    <select class="grade-select-md-3 mb-3" id="grade">
-                      <option selected>학년</option>
-                      <option value="1학년">1학년</option>
-                      <option value="2학년">2학년</option>
-                      <option value="3학년">3학년</option>
-                      <option value="">전체</option>
-                    </select>
-                    <select class="semester-select-md-3 mb-3" id="semester">
-                      <option selected>학기</option>
-                      <option value="1학기">1학기</option>
-                      <option value="2학기">2학기</option>
-                      <option value="">전체</option>
-                    </select>
-                    <select class="exam-select-md-3 mb-3" id="exam">
-                      <option selected>시험</option>
-                      <option value="중간">중간</option>
-                      <option value="기말">기말</option>
-                      <option value="">전체</option>
-                    </select>
-                    <select class="subject-select-md-3 mb-3" id="subject">
-                      <option selected>과목</option>
-                      <option value="국어">국어</option>
-                      <option value="영어">영어</option>
-                      <option value="수학">수학</option>
-                      <option value="사회">사회</option>
-                      <option value="과학">과학</option>
-                      <option value="음악">음악</option>
-                      <option value="체육">체육</option>
-                      <option value="미술">미술</option>
-                      <option value="">전체</option>
-                    </select>
-                    <table class="table table-bordered text-center" id="dataTable1">
+                    <h3 class="card-title">1학년</h3>
+<!--                    <select class="grade-select-md-3 mb-3" id="grade">-->
+<!--                      <option selected>학년</option>-->
+<!--                      <option value="1학년">1학년</option>-->
+<!--                      <option value="2학년">2학년</option>-->
+<!--                      <option value="3학년">3학년</option>-->
+<!--                      <option value="">전체</option>-->
+<!--                    </select>-->
+<!--                    <select class="semester-select-md-3 mb-3" id="semester">-->
+<!--                      <option selected>학기</option>-->
+<!--                      <option value="1학기">1학기</option>-->
+<!--                      <option value="2학기">2학기</option>-->
+<!--                      <option value="">전체</option>-->
+<!--                    </select>-->
+<!--                    <select class="exam-select-md-3 mb-3" id="exam">-->
+<!--                      <option selected>시험</option>-->
+<!--                      <option value="중간">중간</option>-->
+<!--                      <option value="기말">기말</option>-->
+<!--                      <option value="">전체</option>-->
+<!--                    </select>-->
+<!--                    <select class="subject-select-md-3 mb-3" id="subject">-->
+<!--                      <option selected>과목</option>-->
+<!--                      <option value="국어">국어</option>-->
+<!--                      <option value="영어">영어</option>-->
+<!--                      <option value="수학">수학</option>-->
+<!--                      <option value="사회">사회</option>-->
+<!--                      <option value="과학">과학</option>-->
+<!--                      <option value="음악">음악</option>-->
+<!--                      <option value="체육">체육</option>-->
+<!--                      <option value="미술">미술</option>-->
+<!--                      <option value="">전체</option>-->
+<!--                    </select>-->
+                    <table class="table table-bordered text-center" id="dataTable5">
                       <thead>
                       <tr>
-                        <th scope="col">학년</th>
-                        <th scope="col">학기</th>
-                        <th scope="col">중간/기말</th>
-                        <th scope="col">학년</th>
-                        <th scope="col">학기</th>
-                        <th scope="col">중간/기말</th>
-                        <th scope="col">과목</th>
-                        <th scope="col">점수</th>
+                        <th scope="col">국어</th>
+                        <th scope="col">수학</th>
+                        <th scope="col">사회</th>
+                        <th scope="col">과학</th>
+                        <th scope="col">영어</th>
+                        <th scope="col">체육</th>
+                        <th scope="col">음악</th>
+                        <th scope="col">미술</th>
                       </tr>
                       </thead>
                       <tbody>
                       <tr>
-                        <th scope="row">1학년</th>
-                        <td>1학기</td>
-                        <td>중간</td>
-                        <th scope="row">1학년</th>
-                        <td>1학기</td>
-                        <td>중간</td>
-                        <td>국어</td>
                         <td>90</td>
+                        <td>91</td>
+                        <td>92</td>
+                        <td>93</td>
+                        <td>90</td>
+                        <td>91</td>
+                        <td>92</td>
+                        <td>93</td>
                       </tr>
+                      </tbody>
+                    </table>
+                    <table class="table table-bordered text-center" id="dataTable6">
+                      <thead>
                       <tr>
-                        <th scope="row">1학년</th>
-                        <td>1학기</td>
-                        <td>중간</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td>영어</td>
-                        <td>90</td>
+                        <th scope="col">국어</th>
+                        <th scope="col">수학</th>
+                        <th scope="col">사회</th>
+                        <th scope="col">과학</th>
+                        <th scope="col">영어</th>
+                        <th scope="col">체육</th>
+                        <th scope="col">음악</th>
+                        <th scope="col">미술</th>
                       </tr>
+                      </thead>
+                      <tbody>
                       <tr>
-                        <th scope="row">1학년</th>
-                        <td>1학기</td>
-                        <td>중간</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td>수학</td>
                         <td>90</td>
+                        <td>91</td>
+                        <td>92</td>
+                        <td>93</td>
+                        <td>90</td>
+                        <td>91</td>
+                        <td>92</td>
+                        <td>93</td>
                       </tr>
+                      </tbody>
+                    </table>
+                    <h3 class="card-title">2학년</h3>
+                    <table class="table table-bordered text-center" id="dataTable3">
+                      <thead>
                       <tr>
-                        <th scope="row">1학년</th>
-                        <td>1학기</td>
-                        <td>중간</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td>사회</td>
-                        <td>90</td>
+                        <th scope="col">국어</th>
+                        <th scope="col">수학</th>
+                        <th scope="col">사회</th>
+                        <th scope="col">과학</th>
+                        <th scope="col">영어</th>
+                        <th scope="col">체육</th>
+                        <th scope="col">음악</th>
+                        <th scope="col">미술</th>
                       </tr>
+                      </thead>
+                      <tbody>
                       <tr>
-                        <th scope="row">1학년</th>
-                        <td>1학기</td>
-                        <td>중간</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td>과학</td>
                         <td>90</td>
+                        <td>91</td>
+                        <td>92</td>
+                        <td>93</td>
+                        <td>90</td>
+                        <td>91</td>
+                        <td>92</td>
+                        <td>93</td>
                       </tr>
+                      </tbody>
+                    </table>
+                    <table class="table table-bordered text-center" id="dataTable4">
+                      <thead>
                       <tr>
-                        <th scope="row">1학년</th>
-                        <td>1학기</td>
-                        <td>중간</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td>음악</td>
-                        <td>90</td>
+                        <th scope="col">국어</th>
+                        <th scope="col">수학</th>
+                        <th scope="col">사회</th>
+                        <th scope="col">과학</th>
+                        <th scope="col">영어</th>
+                        <th scope="col">체육</th>
+                        <th scope="col">음악</th>
+                        <th scope="col">미술</th>
                       </tr>
+                      </thead>
+                      <tbody>
                       <tr>
-                        <th scope="row">1학년</th>
-                        <td>1학기</td>
-                        <td>중간</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td>체육</td>
                         <td>90</td>
+                        <td>91</td>
+                        <td>92</td>
+                        <td>93</td>
+                        <td>90</td>
+                        <td>91</td>
+                        <td>92</td>
+                        <td>93</td>
                       </tr>
+                      </tbody>
+                    </table>
+                    <h3 class="card-title">3학년</h3>
+                    <table class="table table-bordered text-center" id="dataTable1">
+                      <thead>
                       <tr>
-                        <th scope="row">1학년</th>
-                        <td>1학기</td>
-                        <td>중간</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td>미술</td>
-                        <td>90</td>
+                        <th scope="col">국어</th>
+                        <th scope="col">수학</th>
+                        <th scope="col">사회</th>
+                        <th scope="col">과학</th>
+                        <th scope="col">영어</th>
+                        <th scope="col">체육</th>
+                        <th scope="col">음악</th>
+                        <th scope="col">미술</th>
                       </tr>
+                      </thead>
+                      <tbody>
+
+                      </tbody>
+                    </table>
+                    <table class="table table-bordered text-center" id="dataTable2">
+                      <thead>
                       <tr>
-                        <th scope="row">1학년</th>
-                        <td>1학기</td>
-                        <td>기말</td>
-                        <th scope="row">1학년</th>
-                        <td>1학기</td>
-                        <td>기말</td>
-                        <td>국어</td>
-                        <td>90</td>
+                        <th scope="col">국어</th>
+                        <th scope="col">수학</th>
+                        <th scope="col">사회</th>
+                        <th scope="col">과학</th>
+                        <th scope="col">영어</th>
+                        <th scope="col">체육</th>
+                        <th scope="col">음악</th>
+                        <th scope="col">미술</th>
                       </tr>
-                      <tr>
-                        <th scope="row">1학년</th>
-                        <td>1학기</td>
-                        <td>기말</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td>영어</td>
-                        <td>90</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">1학년</th>
-                        <td>1학기</td>
-                        <td>기말</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td>수학</td>
-                        <td>90</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">1학년</th>
-                        <td>1학기</td>
-                        <td>기말</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td>사회</td>
-                        <td>90</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">1학년</th>
-                        <td>1학기</td>
-                        <td>기말</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td>과학</td>
-                        <td>90</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">1학년</th>
-                        <td>1학기</td>
-                        <td>기말</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td>음악</td>
-                        <td>90</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">1학년</th>
-                        <td>1학기</td>
-                        <td>기말</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td>체육</td>
-                        <td>90</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">1학년</th>
-                        <td>1학기</td>
-                        <td>기말</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td>미술</td>
-                        <td>90</td>
-                      </tr>
-                      <th scope="row">2학년</th>
-                      <td>1학기</td>
-                      <td>중간</td>
-                      <th scope="row">2학년</th>
-                      <td>1학기</td>
-                      <td>중간</td>
-                      <td>국어</td>
-                      <td>90</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">2학년</th>
-                        <td>1학기</td>
-                        <td>중간</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td>영어</td>
-                        <td>90</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">2학년</th>
-                        <td>1학기</td>
-                        <td>중간</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td>수학</td>
-                        <td>90</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">2학년</th>
-                        <td>1학기</td>
-                        <td>중간</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td>사회</td>
-                        <td>90</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">2학년</th>
-                        <td>1학기</td>
-                        <td>중간</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td>과학</td>
-                        <td>90</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">2학년</th>
-                        <td>1학기</td>
-                        <td>중간</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td>음악</td>
-                        <td>90</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">2학년</th>
-                        <td>1학기</td>
-                        <td>중간</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td>체육</td>
-                        <td>90</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">2학년</th>
-                        <td>1학기</td>
-                        <td>중간</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td>미술</td>
-                        <td>90</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">2학년</th>
-                        <td>1학기</td>
-                        <td>기말</td>
-                        <th scope="row">2학년</th>
-                        <td>1학기</td>
-                        <td>기말</td>
-                        <td>국어</td>
-                        <td>90</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">2학년</th>
-                        <td>1학기</td>
-                        <td>기말</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td>영어</td>
-                        <td>90</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">2학년</th>
-                        <td>1학기</td>
-                        <td>기말</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td>수학</td>
-                        <td>90</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">2학년</th>
-                        <td>1학기</td>
-                        <td>기말</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td>사회</td>
-                        <td>90</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">2학년</th>
-                        <td>1학기</td>
-                        <td>기말</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td>과학</td>
-                        <td>90</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">2학년</th>
-                        <td>1학기</td>
-                        <td>기말</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td>음악</td>
-                        <td>90</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">2학년</th>
-                        <td>1학기</td>
-                        <td>기말</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td>체육</td>
-                        <td>90</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">2학년</th>
-                        <td>1학기</td>
-                        <td>기말</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td>미술</td>
-                        <td>90</td>
-                      </tr>
+                      </thead>
+                      <tbody>
+
                       </tbody>
                     </table>
                   </div>
