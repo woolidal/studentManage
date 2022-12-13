@@ -4,8 +4,8 @@ document.getElementById("my-button_ee").onclick = function(chk) {
    alert(month+"일 출석이 적용됩니다.");
    if (month === 14)
    {
-      document.getElementById("14_01").innerText="●";
-      document.getElementById("14_02").innerText="●";
+      document.getElementById("14_01").innerText="●"
+      document.getElementById("14_02").innerText="●"
       document.getElementById("14_03").innerText="●"
       document.getElementById("14_04").innerText="●"
       document.getElementById("14_05").innerText="●"
