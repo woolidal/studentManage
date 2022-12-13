@@ -339,34 +339,89 @@
 
                     <!-- Pie Chart -->
                     <div class="col-xl-4 col-lg-5">
-                        <div class="card shadow mb-4">
-                            <!-- Card Header - Dropdown -->
-                            <div
-                                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                <!--  달 력   -->
-                                <div class="sec_cal">
-                                    <div class="cal_nav">
-                                        <a href="javascript:;" class="nav-btn go-prev">prev</a>
-                                        <div class="year-month"></div>
-                                        <a href="javascript:;" class="nav-btn go-next">next</a>
-                                    </div>
-                                    <div class="cal_wrap">
-                                        <div class="days">
-                                            <div class="day">MON</div>
-                                            <div class="day">TUE</div>
-                                            <div class="day">WED</div>
-                                            <div class="day">THU</div>
-                                            <div class="day">FRI</div>
-                                            <div class="day">SAT</div>
-                                            <div class="day">SUN</div>
+                        <div class ="col">
+                            <div class="card shadow mb-4">
+                                <!-- Card Header - Dropdown -->
+                                <div
+                                        class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                    <!--  달 력   -->
+                                    <div class="sec_cal">
+                                        <div class="cal_nav">
+                                            <a href="javascript:;" class="nav-btn go-prev">prev</a>
+                                            <div class="year-month"></div>
+                                            <a href="javascript:;" class="nav-btn go-next">next</a>
                                         </div>
-                                        <div class="dates"></div>
+                                        <div class="cal_wrap">
+                                            <div class="days">
+                                                <div class="day">MON</div>
+                                                <div class="day">TUE</div>
+                                                <div class="day">WED</div>
+                                                <div class="day">THU</div>
+                                                <div class="day">FRI</div>
+                                                <div class="day">SAT</div>
+                                                <div class="day">SUN</div>
+                                            </div>
+                                            <div class="dates"></div>
+                                        </div>
                                     </div>
                                 </div>
+
                             </div>
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary">공지사항 게시판</h6>
+                                </div>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <!-- 글 위에 hover 하면 highlight 되게 처리 /hus.kyoem -->
+                                        <table class="table table-bordered table-hover" id="dataTable" width="100%" cellspacing="0">
+                                            <thead>
+                                            <tr>
+                                                <th style="text-align:center; width:3%; ">제목</th>
+                                                <th style="text-align:center; width:3%; ">작성자</th>
+                                                <th style="text-align:center; width:2%; ">날짜</th>
+                                                <th style="text-align:center; width:3%; ">조회</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                <td style="text-align:center;">학생출석관리</td>
+                                                <td style="text-align:center;">교장선생님</td>
+                                                <td style="text-align:center;">2022/12/09</td>
+                                                <td style="text-align:center;">120</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="text-align:center;">학생결석관리</td>
+                                                <td style="text-align:center;">교감선생님</td>
+                                                <td style="text-align:center;">2022/12/10</td>
+                                                <td style="text-align:center;">150</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="text-align:center;">선생수업관리</td>
+                                                <td style="text-align:center;">교감선생님</td>
+                                                <td style="text-align:center;">2022/12/11</td>
+                                                <td style="text-align:center;">200</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="text-align:center;">학교교칙수정</td>
+                                                <td style="text-align:center;">체육선생님</td>
+                                                <td style="text-align:center;">2022/12/12</td>
+                                                <td style="text-align:center;">219</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="text-align:center;">학교상벌점</td>
+                                                <td style="text-align:center;">체육선생님</td>
+                                                <td style="text-align:center;">2022/12/12</td>
+                                                <td style="text-align:center;">120</td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
 
                         </div>
-                    </div>
 
                     <!-- Area Chart -->
                     <div class="col-xl-8 col-lg-7">
@@ -394,20 +449,47 @@
                             <div class="card-body">
                                 <div class="table-responsive">
                                     <!-- 표 테두리선, 스트라이프, 내용 중앙정렬 /hus.kyeom -->
-                                    <table class="table table-bordered table-striped text-center" id="TimeTable" width="100%" cellspacing="0">
+                                    <table style="height: 980px" class="table table-bordered table-striped text-center" id="TimeTable" width="100%" cellspacing="0">
                                         <thead>
                                         <tr>
-                                            <td>교시</td>
-                                            <td><b>월</b></td>
-                                            <td><b>화</b></td>
-                                            <td><b>수</b></td>
-                                            <td><b>목</b></td>
-                                            <td><b>금</b></td>
+                                            <td style="text-align:center; width:3%; " ><b>교시</b></td>
+                                            <td style="text-align:center; width:3%; "><b>월</b></td>
+                                            <td style="text-align:center; width:3%; "><b>화</b></td>
+                                            <td style="text-align:center; width:3%; "><b>수</b></td>
+                                            <td style="text-align:center; width:3%; "><b>목</b></td>
+                                            <td style="text-align:center; width:3%; "><b>금</b></td>
                                         </tr>
                                         </thead>
                                         <tbody>
                                         <tr>
-                                            <td>1</td>
+                                            <td colspan="6" style="text-align:center; width:1%; font-size: 20pt ; padding: 1px"><b style="color:#000000;">조회시간</b></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align:center; width:1%; font-size: 20pt ; padding: 1px"><b>1</b></td>
+                                            <td></td>
+                                            <td>-</td>
+                                            <td style="text-align:center; width:1%; font-size: 20pt ; padding: 1px"><b style="color: #ff253a">수학1 (2-1)</b></td>
+                                            <td>-</td>
+                                            <td style="text-align:center; width:1%; font-size: 20pt ; padding: 1px"><b style="color: #1cc88a">미적분 (3-5)</b></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align:center; width:1%; font-size: 20pt ; padding: 1px"><b>2</b></td>
+                                            <td>-</td>
+                                            <td style="text-align:center; width:1%; font-size: 20pt ; padding: 1px"><b style="color: #dda20a">수학1 (2-3)</b></td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align:center; width:1%; font-size: 20pt ; padding: 1px"><b>3</b></td>
+                                            <td style="text-align:center; width:1%; font-size: 20pt ; padding: 1px"><b style="color: #ff253a">수학1 (2-1)</b></td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                            <td style="text-align:center; width:1%; font-size: 20pt ; padding: 1px"><b style="color: #dda20a">수학1 (2-3)</b></td>
+                                            <td>-</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align:center; width:1%; font-size: 20pt ; padding: 1px"><b>4</b></td>
                                             <td>-</td>
                                             <td>-</td>
                                             <td>-</td>
@@ -415,52 +497,34 @@
                                             <td>-</td>
                                         </tr>
                                         <tr>
-                                            <td>2</td>
-                                            <td>-</td>
+                                            <td colspan="6" style="text-align:center; width:1%; font-size: 20pt ; padding: 1px"><b style="color:#000000;">점심시간</b></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align:center; width:1%; font-size: 20pt ; padding: 1px"><b>5</b></td>
+                                            <td style="text-align:center; width:1%; font-size: 20pt ; padding: 1px"><b style="color: #2e59d9">미적분 (3-1)</b></td>
                                             <td>-</td>
                                             <td>-</td>
                                             <td>-</td>
                                             <td>-</td>
                                         </tr>
                                         <tr>
-                                            <td>3</td>
+                                            <td style="text-align:center; width:1%; font-size: 20pt ; padding: 1px"><b>6</b></td>
                                             <td>-</td>
                                             <td>-</td>
-                                            <td>-</td>
-                                            <td>-</td>
-                                            <td>-</td>
-                                        </tr>
-                                        <tr>
-                                            <td>4</td>
-                                            <td>-</td>
-                                            <td>-</td>
-                                            <td>-</td>
+                                            <td style="text-align:center; width:1%; font-size: 20pt ; padding: 1px"><b style="color: #2e59d9">미적분 (3-1)</b></td>
                                             <td>-</td>
                                             <td>-</td>
                                         </tr>
                                         <tr>
-                                            <td>5</td>
+                                            <td style="text-align:center; width:1%; font-size: 20pt ; padding: 1px"><b>7</b></td>
                                             <td>-</td>
                                             <td>-</td>
                                             <td>-</td>
                                             <td>-</td>
-                                            <td>-</td>
+                                            <td style="text-align:center; width:1%; font-size: 20pt ; padding: 1px"><b style="color: #1cc88a">미적분 (3-5)</b></td>
                                         </tr>
                                         <tr>
-                                            <td>6</td>
-                                            <td>-</td>
-                                            <td>-</td>
-                                            <td>-</td>
-                                            <td>-</td>
-                                            <td>-</td>
-                                        </tr>
-                                        <tr>
-                                            <td>7</td>
-                                            <td>-</td>
-                                            <td>-</td>
-                                            <td>-</td>
-                                            <td>-</td>
-                                            <td>-</td>
+                                            <td colspan="6" style="text-align:center; width:1%; font-size: 20pt ; padding: 1px"><b style="color:#000000;">종례시간</b></td>
                                         </tr>
                                         </tbody>
                                     </table>
@@ -474,107 +538,7 @@
 
                 </div>
 
-                <!-- Content Row -->
-                <div class="row">
 
-                    <!-- Content Column -->
-                    <div class="col-xl-4 col-lg-5">
-
-                        <!-- Project Card Example -->
-                        <div class="card shadow mb-4">
-                            <div class="card-header py-3">
-                                <h6 class="m-0 font-weight-bold text-primary">공지사항 게시판</h6>
-                            </div>
-                            <div class="card-body">
-                                <div class="table-responsive">
-                                    <!-- 글 위에 hover 하면 highlight 되게 처리 /hus.kyoem -->
-                                    <table class="table table-bordered table-hover" id="dataTable" width="100%" cellspacing="0">
-                                        <thead>
-                                        <tr>
-                                            <th style="width: 1%">제목</th>
-                                            <th style="width: 1%">작성자</th>
-                                            <th style="width: 1%">날짜</th>
-                                            <th style="width: 1%">조회</th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>공지입니다.</td>
-                                                <td>관리자</td>
-                                                <td>2022/12/08</td>
-                                                <td>12</td>
-                                            </tr>
-                                            <tr>
-                                                <td>배고픕니다.</td>
-                                                <td>관리자</td>
-                                                <td>2022/12/07</td>
-                                                <td>22</td>
-                                            </tr>
-                                            <tr>
-                                                <td>운동회 공지</td>
-                                                <td>관리자</td>
-                                                <td>2022/12/05</td>
-                                                <td>15</td>
-                                            </tr>
-                                            <tr>
-                                                <td>아메리카노.</td>
-                                                <td>관리자</td>
-                                                <td>2022/12/07</td>
-                                                <td>12</td>
-                                            </tr>
-                                            <tr>
-                                                <td>공지입니다.</td>
-                                                <td>관리자</td>
-                                                <td>2022/12/08</td>
-                                                <td>12</td>
-                                            </tr>
-                                            <tr>
-                                                <td>배고픕니다.</td>
-                                                <td>관리자</td>
-                                                <td>2022/12/07</td>
-                                                <td>22</td>
-                                            </tr>
-                                            <tr>
-                                                <td>운동회 공지</td>
-                                                <td>관리자</td>
-                                                <td>2022/12/05</td>
-                                                <td>15</td>
-                                            </tr>
-                                            <tr>
-                                                <td>아메리카노.</td>
-                                                <td>관리자</td>
-                                                <td>2022/12/07</td>
-                                                <td>12</td>
-                                            </tr>
-                                            <tr>
-                                                <td>공지입니다.</td>
-                                                <td>관리자</td>
-                                                <td>2022/12/08</td>
-                                                <td>12</td>
-                                            </tr>
-                                            <tr>
-                                                <td>배고픕니다.</td>
-                                                <td>관리자</td>
-                                                <td>2022/12/07</td>
-                                                <td>22</td>
-                                            </tr>
-                                            <tr>
-                                                <td>운동회 공지</td>
-                                                <td>관리자</td>
-                                                <td>2022/12/05</td>
-                                                <td>15</td>
-                                            </tr>
-                                            <tr>
-                                                <td>아메리카노.</td>
-                                                <td>관리자</td>
-                                                <td>2022/12/07</td>
-                                                <td>12</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
                         <!--                            &lt;!&ndash; Color System &ndash;&gt;-->
                         <!--                            <div class="row">-->
                         <!--                                <div class="col-lg-6 mb-4">-->
