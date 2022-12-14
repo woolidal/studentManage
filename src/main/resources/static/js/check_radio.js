@@ -1,5 +1,5 @@
 function NoMultiChk1(element){
-        const checkboxes = document.getElementsByName("box1");
+    const checkboxes = document.getElementsByName("box1");
     checkboxes.forEach((cb) => {
         cb.checked = false;
     })
@@ -43,6 +43,17 @@ function NoMultiChk3(element){
         cb.checked = false;
     })
     element.checked = true;
+
+    const checkboxes2 = document.getElementById("chk_c23").checked;
+    if (checkboxes2 === true)
+    {
+        const date = new Date();
+        document.getElementById("lated2").innerText =  date.toLocaleTimeString('ko-kr');
+    }
+    else
+    {
+        document.getElementById("lated2").innerText="-";
+    }
 }
 function NoMultiChk4(element){
     const checkboxes = document.getElementsByName("box4");

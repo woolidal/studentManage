@@ -1,4 +1,19 @@
 document.getElementById("my-button").onclick = function(chk) {
+    const checkboxes1 = document.getElementsByName("box1");
+    checkboxes1.forEach((cb) => {
+        cb.checked = false;
+        document.getElementById("lated").innerText="-";
+    })
+    const checkboxes2 = document.getElementsByName("box2");
+    checkboxes2.forEach((cb) => {
+        cb.checked = false;
+        document.getElementById("lated1").innerText="-";
+    })
+    const checkboxes3 = document.getElementsByName("box3");
+    checkboxes3.forEach((cb) => {
+        cb.checked = false;
+        document.getElementById("lated2").innerText="-";
+    })
     document.getElementById("chk_k1").checked = true;
     document.getElementById("chk_k2").checked = true;
     document.getElementById("chk_k3").checked = true;
