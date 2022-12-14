@@ -118,9 +118,10 @@ public class WebController {
         return "class_stuManage";
     }
 
+
     @RequestMapping("/class_stuManage_")
-    public String class_stuManage_1() {
-        return "class_stuManage_1";
+    public String class_stuManage1_GTH() {
+        return "class_stuManage1_GTH";
     }
 
     @RequestMapping("/class_stuManage1")
