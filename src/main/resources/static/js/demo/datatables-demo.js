@@ -1,4 +1,4 @@
 // Call the dataTables jQuery plugin
 $(document).ready(function() {
-  $('#dataTable').DataTable();
+  var oTable = $('#dataTable').dataTable({searching: false,	lengthChange: false, ordering: false, info: false,});
 });
