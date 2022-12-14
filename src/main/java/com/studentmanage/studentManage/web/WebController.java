@@ -56,6 +56,12 @@ public class WebController {
         return "subject_stuManage2_1_change";
     }
 
+    @RequestMapping("/subject_stuManage2_1.")
+    public String subject_stuManage2_1_upload(){
+
+        return "subject_stuManage2_1_upload";
+    }
+
     @RequestMapping("/subject_stuManage2_3")
     public String subject_stuManage2_3(){
 
